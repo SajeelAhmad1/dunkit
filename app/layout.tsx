@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./layout/header";
 import Footer from "./layout/footer";
+import { IntlProvider } from 'react-intl';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,10 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <IntlProvider
+          locale="en"
+          messages={{}}
+        >
         {/* Include Header and Footer here */}
         <Header />
         <main>{children}</main>
         <Footer />
+        </IntlProvider>
       </body>
     </html>
   );

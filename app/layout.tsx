@@ -11,6 +11,8 @@ import { IntlProvider } from 'react-intl';
 import "./globals.css";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +51,14 @@ export default function RootLayout({
     };
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,  // Animation duration
+      delay: 200,      // Delay before animation starts
+      offset: 100,     // Offset from the top before animation triggers
+      easing: "ease-in-out", 
+    });
+  }, []);
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

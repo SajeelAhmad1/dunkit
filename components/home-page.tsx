@@ -4,6 +4,7 @@ import Button from '@/components/button';
 import MaxWidth from '@/components/max-width';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { FormattedMessage } from 'react-intl';
 
 const HomePage = () => {
 
@@ -27,14 +28,23 @@ const HomePage = () => {
             >
               <div>
                 <h1 >
-                  Make it easier to continue your gym routine
+                  <FormattedMessage 
+                    id={"HomePage.make"} 
+                    defaultMessage={"Make it easier to continue your gym routine"}
+                    />
                 </h1>
               </div>
               <div>
                 <p >
-                  We are committed to providing a casual and <br /> convenient
-                  gym experience. <br /> Rental clothing, towels, and shoes are
-                  available <br /> to help you develop an exercise habit.
+                  <FormattedMessage id={"HomePage.commited"}
+                  defaultMessage={"We are committed to providing a casual and "} 
+                  /><br/>
+                  <FormattedMessage id={"HomePage.convinient"} defaultMessage={"convenient gym experience."}/>
+                   <br />
+                   <FormattedMessage id={"HomePage.convinient"} 
+                   defaultMessage={"Rental clothing, towels, and shoes are available"}/>
+                  <br /> 
+                  <FormattedMessage id={"HomePage.habit"} defaultMessage={"to help you develop an exercise habit."}/>
                 </p>
               </div>
               <div className='flex justify-start'>
@@ -43,7 +53,9 @@ const HomePage = () => {
             <div
             onClick={()=> router.push("/service")}
             >
-            <Button animation>Click here for services details</Button>
+            <Button animation>
+              <FormattedMessage id={"HomePage.click"} defaultMessage={" Click here for services details"}/>
+             </Button>
             </div>
               </div>
             </div>
@@ -87,10 +99,13 @@ const HomePage = () => {
               data-aos-anchor-placement="top-bottom"
             >
               <h2 >
-                ABOUT
+                <FormattedMessage id={"HomePage.about"} defaultMessage={"ABOUT"}/>
               </h2>
               <h3>
-                Going to the gym has become more of a chore
+              <FormattedMessage 
+                id={"HomePage.going"} 
+                defaultMessage={"Going to the gym has become more of a chore"}
+              />
               </h3>
             </div>
             <div>
@@ -98,11 +113,18 @@ const HomePage = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
               >
-                There are many reasons to get into fitness, such as for health
-                or to improve <br /> one&apos;s body. However, it is not easy to make
-                daily exercise a habit. <br /> We will increase the convenience
-                of our fitness facilities, <br /> making fitness more accessible
-                and accessible.
+                <FormattedMessage id={"HomePage.there"} 
+                defaultMessage={"There are many reasons to get into fitness, such as for health or to improve"}
+                /><br />
+                <FormattedMessage id={"HomePage.ones"} 
+                defaultMessage={" one's body. However, it is not easy to make daily exercise a habit."}
+                /><br />
+                <FormattedMessage id={"HomePage.we"} 
+                defaultMessage={"We will increase the convenience of our fitness facilities, "}
+                /><br />
+                <FormattedMessage id={"HomePage.fit"} 
+                defaultMessage={"making fitness more accessible and accessible."}
+                />
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto' 
@@ -118,7 +140,9 @@ const HomePage = () => {
                   alt='dunkit logo'
                   className=' h-[175px] w-[100%] object-cover object-center'
                 />
-                <p className='flex justify-center p-4'>Company Profile</p>
+                <p className='flex justify-center p-4'>
+                  <FormattedMessage id={"HomePage.compny"} defaultMessage={"Company Profile"}/>
+                </p>
               </div>
               <div
                 onClick = {()=>router.push("/service")}
@@ -129,7 +153,9 @@ const HomePage = () => {
                   alt='dunkit logo'
                   className=' h-[175px] w-[100%] object-cover object-center'
                 />
-                <p className='flex justify-center p-4'>Service Details</p>
+                <p className='flex justify-center p-4'>
+                  <FormattedMessage id={"HomePage.dtail"} defaultMessage={"Service Details"}/>
+                </p>
               </div>
             </div>
           </div>
@@ -145,19 +171,40 @@ const HomePage = () => {
             data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
-              <h2>SERVICE</h2>
-              <h3>Dunkit Subscription-based rental wear</h3>
+              <h2>
+                <FormattedMessage id={"HomePage.service"}
+                defaultMessage={"SERVICE"}
+                />
+              </h2>
+              <h3>
+                <FormattedMessage 
+                  id={"HomePage.sub"} 
+                  defaultMessage={"Dunkit Subscription-based rental wear"}
+                />
+              </h3>
             </div>
             <div 
             data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
               <p className='tracking-[2px] leading-[30px]'>
-                Many gym users go to the gym while they are out and about, and{' '}
-                <br />
-                carry a change of clothes and shoes with them. <br /> Dunkit
-                offers gym users a subscription-based rental outfit, allowing
-                them <br /> to stop by the gym empty-handed.
+              <FormattedMessage 
+                  id={"HomePage.gym"} 
+                  defaultMessage={"Many gym users go to the gym while they are out and about, and"}
+                /><br />
+                <FormattedMessage 
+                  id={"HomePage.gymuser"} 
+                  defaultMessage={"carry a change of clothes and shoes with them. "}
+                /><br />
+                <FormattedMessage 
+                  id={"HomePage.rental"} 
+                  defaultMessage={"Dunkit offers gym users a subscription-based rental outfit, allowing them"}
+                /><br />
+                <FormattedMessage 
+                  id={"HomePage.empatyhandl"} 
+                  defaultMessage={"to stop by the gym empty-handed."}
+                />
+                 
               </p>
             </div>
             <div className='flex items-center justify-center' 
@@ -165,7 +212,11 @@ const HomePage = () => {
               data-aos-anchor-placement="top-bottom"
             >
               <div onClick = {()=>router.push("/service")}>
-                <Button animation>Service Details</Button>
+                <Button animation>
+                    <FormattedMessage id={"HomePAge.serv-detail"}
+                    defaultMessage={"Service Details"}
+                    />
+                </Button>
               </div>
             </div>
             <div className=' w-full lg:w-[250px] h-full mx-auto' 
@@ -212,7 +263,7 @@ const HomePage = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
-              NEWS
+              <FormattedMessage id={"HomePage.news"} defaultMessage={"NEWS"}/>
             </h2>
             <div className='flex flex-col gap-4 '>
               <div className='group'>
@@ -221,9 +272,12 @@ const HomePage = () => {
                 transform scale-y-100 group-hover:scale-y-105 transition-transform
                  duration-300 ease-in-out origin-top group-hover:bg-gray-100'
                 >
-                  <p className='text-xs'>February 21, 2025</p>
+                  <p className='text-xs'>
+                    <FormattedMessage id={"HomePage.feb"} defaultMessage={"February 21, 2025"}/>
+                  </p>
                   <h5 >
-                    Dunit Inc. raises seed round funding
+                  <FormattedMessage id={"HomePage.raises"} 
+                  defaultMessage={"Dunit Inc. raises seed round funding"}/>
                   </h5>
                 </div>
               </div>
@@ -233,9 +287,12 @@ const HomePage = () => {
                 transform scale-y-100 group-hover:scale-y-105 transition-transform
                  duration-300 ease-in-out origin-top group-hover:bg-gray-100'
                 >
-                  <p className='text-xs'>February 21, 2025</p>
+                  <p className='text-xs'>
+                    <FormattedMessage id={"HomePage.dat"} defaultMessage={"February 21, 2025"}/>
+                  </p>
                   <h5>
-                    Announcement of Corporate Website Renewal
+                  <FormattedMessage id={"HomePage.annunce"} defaultMessage={"Announcement of Corporate Website Renewal"}/>
+                  
                   </h5>
                 </div>
               </div>
@@ -249,7 +306,7 @@ const HomePage = () => {
                 animation
                 className='rounded-0'
               >
-                View All
+                <FormattedMessage id={"HomePage.viewall"} defaultMessage={'View All'}/>
               </Button>
             </div>
           </div>

@@ -1,3 +1,9 @@
+'use client'
+
+// Todo: translation
+
+import { FormattedMessage,  } from "react-intl";
+
 const HowToUse = () => {
     const data = [
         {
@@ -25,11 +31,13 @@ const HowToUse = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
-            <h2 className="font-bold mb-8">How to use Dunkit</h2>
+            <h2 className="font-bold mb-8">
+                <FormattedMessage id={"HowTwoUse.HTDunkit"} defaultMessage={"How to use Dunkit"}/>
+            </h2>
             <div className="mt-10 flex flex-col gap-10">
                 {data.map((item, index) => (
                     <div 
-                        className="flex flex-col md:flex-row items-center items-center w-full space-y-8" 
+                        className="flex flex-col md:flex-row  items-center w-full space-y-8" 
                         key={index}
                     >
                         <div className="w-3/4 md:w-1/2">

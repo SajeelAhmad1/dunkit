@@ -1,5 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation"
+import { FormattedMessage } from "react-intl";
 
 const NewsPage = () => {
   const router = useRouter();
@@ -39,7 +40,7 @@ const NewsPage = () => {
         {/* Page title */}
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-            News
+            <FormattedMessage id={"NewsPage.news"} defaultMessage={"News"}/>
           </h1>
         </div>
 
@@ -58,13 +59,13 @@ const NewsPage = () => {
                 />
                 <div className="mt-4 sm:mt-6">
                   <p className="inline-block py-1 px-2 text-xs text-white bg-gray-900 rounded">
-                    BUSINESS
+                    <FormattedMessage id={"NewsPage.business"} defaultMessage={"BUSINESS"}/>
                   </p>
                   <h4 className="mt-3 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Dunit Inc. raises seed round funding
+                    <FormattedMessage id={"NewsPage.inc"} defaultMessage={"Dunit Inc. raises seed round funding"}/>
                   </h4>
                   <p className="mt-2 text-sm text-gray-400">
-                    February 21, 2025
+                    <FormattedMessage id={"NewsPage.feb"} defaultMessage={"February 21, 2025"}/>
                   </p>
                 </div>
               </div>
@@ -84,13 +85,15 @@ const NewsPage = () => {
                 />
                 <div className="mt-4 sm:mt-6">
                   <p className="inline-block py-1 px-2 text-xs text-white bg-green-700 rounded">
-                    ANNOUNCEMENT
+                    <FormattedMessage id={"NewsPage.annunce"} defaultMessage={"ANNOUNCEMENT"}/>
                   </p>
                   <h4 className="mt-3 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    Announcement of corporate website renewal
+                  <FormattedMessage id={"NewsPage.annunce-web"} defaultMessage={"Announcement of corporate website renewal"}/>
+                    
                   </h4>
                   <p className="mt-2 text-sm text-gray-500">
-                    February 21, 2025
+                  <FormattedMessage id={"NewsPage.21feb"} defaultMessage={"February 21, 2025"}/>
+                    
                   </p>
                 </div>
               </div>

@@ -10,7 +10,7 @@ const InstallmentsPage = () => {
         <div className="min-h-screen flex flex-col">
             <main className="flex-1 pb-32">
 
-                <div className="relative space-y-40 mt-20">
+                <div className="relative space-y-32 mt-20">
                     <ServicesIntro text={text} />
                     <Features />
                     <FeaturesExp />

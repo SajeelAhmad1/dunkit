@@ -98,7 +98,7 @@ const Header = () => {
     <>
       {/* desktop nav */}
       <header
-        className={`hidden lg:flex items-center justify-between relative border-b border-white  px-4 py-2  backdrop-blur-sm z-[100]
+        className={`hidden lg:flex items-center justify-between relative border-b border-white  px-4 py-1  backdrop-blur-sm z-[100]
            bg-black/70`}
       >
         <div className='flex items-center'>

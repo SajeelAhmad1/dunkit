@@ -1,5 +1,6 @@
 import MaxWidth from "@/components/max-width"
 import { ArrowRight } from "lucide-react"
+import { FormattedMessage } from "react-intl"
 
 const Inquiry=()=> {
   return (
@@ -19,7 +20,13 @@ const Inquiry=()=> {
       <div className="w-full mx-auto lg:w-[600px] lg:mx-auto mb-10 ">
         <div className=" lg:gap-4 lg:grid lg:grid-cols-2 ">
             <div className="mt-20">
-                <h5 className="font-bold ">Last name</h5>
+                <h5 className="font-bold ">
+                  Last name
+                  <FormattedMessage 
+                  id="last_name"
+                  defaultMessage="Last Name"
+                  />
+                </h5>
                 <input className="p-2  lg:py-3 lg:px-2 w-full border mt-2 border-gray-400" placeholder="Yamada"/>
             </div>
             <div className="mt-3 lg:mt-20">

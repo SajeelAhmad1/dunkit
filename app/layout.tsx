@@ -74,13 +74,16 @@ export default function RootLayout({
         <link rel="icon" href="/v.png" />
       </head>
       <body className={inter.className}>
-        <IntlProvider locale={language} messages={jp}>
+        
         <LayoutWrapper>
+          
+          <IntlProvider locale={language} messages={jp}>
           <Header/>
           {children}
+
+        </IntlProvider>
           <Footer/>
           </LayoutWrapper>
-        </IntlProvider>
       </body>
     </html>
   );

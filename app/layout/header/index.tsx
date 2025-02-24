@@ -6,7 +6,7 @@
 import Button from '@/components/button';
 import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react';
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FormattedMessage } from 'react-intl';
 import LanguageToggle from '@/components/Elements/LanguageToggle';
 import Image, { StaticImageData } from 'next/image';
@@ -64,6 +64,7 @@ export const navMenu: NavMenuItem[] = [
 ];
 
 const Header = ({ isDark }: { isDark: boolean }) => {
+  const pathname = usePathname();
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter();
@@ -95,7 +96,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
     setOpenSubMenu(openSubMenu === name ? null : name);
   };
 
-  const textClass = isDark ? 'text-black/90' : 'text-white';
+  const textClass = isDark ? 'text-warm-gray' : 'text-white';
   const textClassB = isDark ? 'text-black/50' : 'text-white/50';
 
   return (
@@ -105,7 +106,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
         <header
           className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
         >
-          <div className='flex items-center'>
+          <div className='flex items-center cursor-pointer' onClick={() => pathname !== '/' ? router.push('/') : null} >
             <Image
               // src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
               src={isDark ? '/dunkit-black.svg' : '/logo.svg'}
@@ -120,18 +121,19 @@ const Header = ({ isDark }: { isDark: boolean }) => {
               <nav className='flex items-center gap-12'>
                 <ul className='flex items-center justify-center gap-4 font-semibold'>
                   {navMenu?.map((item: NavMenuItem, i: number) => {
+                    const isActive = pathname === item.path;
                     return (
                       <div
                         onClick={(event) => handleNavigation(event, item.path)}
                         key={i}
-                        className={`${({ isActive }: { isActive: boolean }) =>
+                        className={`${
                           isActive
-                            ? `relative group px-3 p2y-2 font-bold text-sm ${textClass} `
-                            : `relative group px-3 py-2 text-sm ${textClassB}`} cursor-pointer`}
+                            ? `relative group px-3 py-2 font-bold text-sm ${textClass} `
+                            : `relative group px-3 py-2 font-normal text-sm ${textClassB}`} cursor-pointer`}
                       >
                         <button className='hover:opacity-100 flex items-center gap-1 cursor-pointer'>
                           <span
-                            className={`text-sm font-normal hover:font-medium ${textClassB} hover:${textClass}`}
+                            className={`text-sm font-normal hover:font-bold ${textClassB} hover:${textClass}`}
                           >
                             {item.name}
                           </span>

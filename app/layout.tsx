@@ -14,6 +14,7 @@ import Cookies from "js-cookie";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +24,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-const messages = { en, jp };
+const messages = { en:jp, jp };
 
 
 export default function RootLayout({

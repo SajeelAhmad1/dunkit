@@ -1,11 +1,13 @@
+'use client'
 import { ArrowRight } from "lucide-react";
+import { FormattedMessage } from "react-intl";
 
 const Promotion = () => {
     return (
         <div className="flex flex-col items-center space-y-8 ">
             <div>
                 <h1 className="text-3xl text-center font-bold mb-4">
-                    More and more gyms are introducing Dunkit!
+                    <FormattedMessage id={"Promotion.more"} defaultMessage={"More and more gyms are introducing Dunkit!"}/>
                 </h1>
             </div>
             <div className="flex items-center justify-center space-x-8">
@@ -20,7 +22,9 @@ const Promotion = () => {
                     className='flex items-center gap-8 border border border-gray-400 rounded-full px-4 py-2  cursor-pointer bg-white
            hover:bg-gray-100 hover:text-white transform transition-all duration-300 ease-in-out  '
                 >
-                    <p className="text-red-600">Price Information</p>
+                    <p className="text-red-600">
+                        <FormattedMessage id={"Promotion.pric"} defaultMessage={"Price Information"}/>
+                    </p>
                     <div className='rounded-full p-1 bg-gray-300 text-gray-100'>
                         <ArrowRight />
                     </div>
@@ -30,7 +34,7 @@ const Promotion = () => {
            hover:bg-gray-100 hover:text-white transform transition-all duration-300 ease-in-out  '
                 >
                     <p className="text-white hover:text-red-600">
-                        For consultation on implementation, please click here
+                    <FormattedMessage id={"Promotion.priec"} defaultMessage={" For consultation on implementation, please click here"}/>
                     </p>
                     <div className='rounded-full p-1 bg-gray-300 text-white'>
                         <ArrowRight />

@@ -39,9 +39,9 @@ const HomePage = () => {
                   <FormattedMessage id={"HomePage.commited"}
                   defaultMessage={"We are committed to providing a casual and "} 
                   /><br/>
-                  <FormattedMessage id={"HomePage.convinient"} defaultMessage={"convenient gym experience."}/>
+                  <FormattedMessage id={"HomePage.convinientgym"} defaultMessage={"convenient gym experience."}/>
                    <br />
-                   <FormattedMessage id={"HomePage.convinient"} 
+                   <FormattedMessage id={"HomePage.convinientand"} 
                    defaultMessage={"Rental clothing, towels, and shoes are available"}/>
                   <br /> 
                   <FormattedMessage id={"HomePage.habit"} defaultMessage={"to help you develop an exercise habit."}/>
@@ -141,7 +141,7 @@ const HomePage = () => {
                   className=' h-[175px] w-[100%] object-cover object-center'
                 />
                 <p className='flex justify-center p-4'>
-                  <FormattedMessage id={"HomePage.compny"} defaultMessage={"Company Profile"}/>
+                  <FormattedMessage id={"HomePage.comny"} defaultMessage={"Company Profile"}/>
                 </p>
               </div>
               <div
@@ -189,7 +189,7 @@ const HomePage = () => {
             >
               <p className='tracking-[2px] leading-[30px]'>
               <FormattedMessage 
-                  id={"HomePage.gym"} 
+                  id={"HomePage.gymssss"} 
                   defaultMessage={"Many gym users go to the gym while they are out and about, and"}
                 /><br />
                 <FormattedMessage 
@@ -197,7 +197,7 @@ const HomePage = () => {
                   defaultMessage={"carry a change of clothes and shoes with them. "}
                 /><br />
                 <FormattedMessage 
-                  id={"HomePage.rental"} 
+                  id={"HomePage.rentaqql"} 
                   defaultMessage={"Dunkit offers gym users a subscription-based rental outfit, allowing them"}
                 /><br />
                 <FormattedMessage 
@@ -263,7 +263,7 @@ const HomePage = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
-              <FormattedMessage id={"HomePage.news"} defaultMessage={"NEWS"}/>
+              <FormattedMessage id={"HomePage.neEws"} defaultMessage={"NEWS"}/>
             </h2>
             <div className='flex flex-col gap-4 '>
               <div className='group'>
@@ -273,7 +273,7 @@ const HomePage = () => {
                  duration-300 ease-in-out origin-top group-hover:bg-gray-100'
                 >
                   <p className='text-xs'>
-                    <FormattedMessage id={"HomePage.feb"} defaultMessage={"February 21, 2025"}/>
+                    <FormattedMessage id={"HomePage.febuary"} defaultMessage={"February 21, 2025"}/>
                   </p>
                   <h5 >
                   <FormattedMessage id={"HomePage.raises"} 
@@ -288,7 +288,7 @@ const HomePage = () => {
                  duration-300 ease-in-out origin-top group-hover:bg-gray-100'
                 >
                   <p className='text-xs'>
-                    <FormattedMessage id={"HomePage.dat"} defaultMessage={"February 21, 2025"}/>
+                    <FormattedMessage id={"HomePage.dates"} defaultMessage={"February 21, 2025"}/>
                   </p>
                   <h5>
                   <FormattedMessage id={"HomePage.annunce"} defaultMessage={"Announcement of Corporate Website Renewal"}/>

@@ -16,7 +16,7 @@ const Inquiry=()=> {
       >
         <div className="h-full w-full lg:w-[600px] mx-auto inset-0  backdrop-blur-lg flex items-center justify-center">
         <h2 className="   font-bold text-white  ">
-          <FormattedMessage id={"Inquiry.inq"} defaultMessage={"i n q u i r y"}/>
+          <FormattedMessage id={"Inquiry.inqll"} defaultMessage={"i n q u i r y"}/>
         </h2>
         </div> 
       </div>
@@ -52,7 +52,7 @@ const Inquiry=()=> {
         <div className="lg:gap-4 lg:grid lg:grid-cols-2 ">
             <div className="mt-3 lg:mt-20">
                     <h5 className="font-bold ">
-                      <FormattedMessage id={"Inquiry.companyname"} defaultMessage={"Company Name (Optional)"}/>
+                      <FormattedMessage id={"Inquiry.qcompanyname"} defaultMessage={"Company Name (Optional)"}/>
                     </h5>
                     <input 
                     className="p-2  lg:py-3 lg:px-2 w-full border mt-2 border-gray-400" 
@@ -64,7 +64,7 @@ const Inquiry=()=> {
                       <FormattedMessage id={"Inguriy.dept"} defaultMessage={" Department, position, etc. (optional)"}/>
                     </h5>
                     <input className="p-2  lg:py-3 lg:px-2 w-full border mt-2 border-gray-400" 
-                     placeholder={intl.formatMessage({id:"Inquiry.tar", defaultMessage:"Optional input"})}
+                     placeholder={intl.formatMessage({id:"Inquiry.etar", defaultMessage:"Optional input"})}
                    />
             </div>
         </div>
@@ -86,7 +86,7 @@ const Inquiry=()=> {
                 </h5>
             </div>
             <textarea 
-            placeholder={intl.formatMessage({id:"Inquiry.enter", defaultMessage:"Enter here"})}  
+            placeholder={intl.formatMessage({id:"Inquiry.1enter", defaultMessage:"Enter here"})}  
             className="w-full h-[300px] px-5 py-2 border mt-2 border-gray-400"/>
         </div>
       </div>
@@ -98,7 +98,7 @@ const Inquiry=()=> {
   <span className="absolute inset-0 bg-linear-to-r from-red-500 to-red-700 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out"></span>
   {/* Button Text */}
   <h6 className="relative z-10 hover:translate-x-2 uppercase text-red-500 group-hover:text-white transition-all duration-300">
-    <FormattedMessage id={"Inquiry.send"} defaultMessage={"Send Inquiry"}/>
+    <FormattedMessage id={"Inquiry.swwend"} defaultMessage={"Send Inquiry"}/>
   </h6>
   {/* Arrow Icon */}
   <div className="group-hover:scale-0  transition-all duration-500 relative z-10 bg-red-500 rounded-full p-1 text-white   group-hover:text-red-500">

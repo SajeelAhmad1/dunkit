@@ -1,15 +1,18 @@
 'use client'
-
+import { useIntl } from "react-intl";
 // Todo: translation
 
 import { FormattedMessage,  } from "react-intl";
 
 const HowToUse = () => {
+
+        const intl =  useIntl();
+
     const data = [
         {
             img: "qr.PNG",
             heading: "Scan the QR code",
-            text: "Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!",
+            text: intl.formatMessage({id:"HowToUse.Qr", defaultMessage:"Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!"}),
             list: []
         },
         {

@@ -1,10 +1,12 @@
+'use client'
 import Button from "@/components/services/button"
+import { useIntl } from "react-intl"
 
 interface ServicesIntroProps {
   text: string
 }
 const ServicesIntro = ({ text }: ServicesIntroProps) => {
-  
+    const intl = useIntl();
   return (
     <div className="">
       <div className="py-8 flex flex-col  items-center justify-center">
@@ -14,9 +16,15 @@ const ServicesIntro = ({ text }: ServicesIntroProps) => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center md:justify-center space-y-2 md:space-x-12">
-          <Button text={"Service Details"} url={"service"} />
-          <Button text={"Reasons for Introduction"} url={"installment"} />
-          <Button text={"Price Information"} url={"pricing"} />
+          <Button 
+          text= {intl.formatMessage({id:"ServicesIntro.ser-detail", defaultMessage:"Service Details"})}
+          url={"service"} />
+          <Button 
+          text= {intl.formatMessage({id:"ServicesIntro.reson-intro", defaultMessage:"Reasons for Introduction"})}
+           url={"installment"} />
+          <Button 
+          text={intl.formatMessage({id:"ServicesIntro.price-info", defaultMessage:"Price Information"})} 
+          url={"pricing"} />
       </div>
     </div>
 

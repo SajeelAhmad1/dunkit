@@ -1,4 +1,7 @@
 "use client"
+
+// Todo: Translation
+
 import MaxWidth from '@/components/max-width';
 import {
   Facebook,
@@ -9,6 +12,7 @@ import {
   LucideIcon,
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { FormattedMessage } from 'react-intl';
 
 const socialLinks: { icon: LucideIcon; url: string }[] = [
   { icon: Link2, url: '#' },
@@ -86,8 +90,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku,
-            Tokyo 105-0013
+            <FormattedMessage id={"Footer.hamamatsucho"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
           </p>
         </div>
 
@@ -95,7 +98,9 @@ const Footer = () => {
           onClick={scrollToTop}
           className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-red-500 w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-red-500 hover:text-red-500 transform duration-300 ease-in-out'
         >
-          <p>Back to top</p>
+          <p>
+            <FormattedMessage id={"Footer.back"} defaultMessage={"Back to top"}/>
+          </p>
         </div>
       </MaxWidth>
     </div>

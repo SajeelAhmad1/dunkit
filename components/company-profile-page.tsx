@@ -1,5 +1,7 @@
 //@/pages/company-profile.tsx
 'use client'
+
+//Todo: translation
 import MaxWidth from "@/components/max-width"
 import { FormattedMessage } from "react-intl"
 

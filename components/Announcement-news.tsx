@@ -56,7 +56,7 @@ const Announcement = () => {
           </div>
           <div className='mt-10 text-base sm:text-lg lg:text-xl'>
           <FormattedMessage 
-              id={"Announcement.background"} 
+              id={"Announcement.background-startup"} 
               defaultMessage={"Dunkit is a startup that rents gym wear, towels, shoes, etc. on a monthly basis, providing an environment where people can train without the hassle of carrying around luggage. With this seed round of funding, we will further improve the quality of our service, expand our functions, and strengthen our brand recognition."}
           />
           </div>
@@ -73,7 +73,7 @@ const Announcement = () => {
           <div className='mt-14 text-base sm:text-lg lg:text-xl'>
             <div>
               <h3 className="text-2xl font-bold">
-                <FormattedMessage id={"Announcement.new-deg"} defaultMessage={"(1) New design"}/>
+                <FormattedMessage id={"Announcement.new-degeee"} defaultMessage={"(1) New design"}/>
               </h3>
               <div className='mt-5'>
               <FormattedMessage id={"Announcement.new-deg"} 
@@ -82,7 +82,7 @@ const Announcement = () => {
             </div>
             <div className='mt-14'>
               <h3 className="text-2xl font-bold">
-                <FormattedMessage id={"Announcement.new-imp"} defaultMessage={"(2) Improved usability"}/>
+                <FormattedMessage id={"Announcement.new-impss"} defaultMessage={"(2) Improved usability"}/>
               </h3>
               <div className='mt-5'>
               <FormattedMessage id={"Announcement.new-imp"}
@@ -97,29 +97,29 @@ const Announcement = () => {
           <div className='flex gap-4 sm:gap-10'>
             <div className='h-[50px] w-[7px] bg-red-700'></div>
             <div className='text-3xl sm:text-4xl lg:text-5xl font-semibold'>
-              <FormattedMessage id={"Announcement.aboutDunk"} defaultMessage={"About Dunkit Inc."}/>
+              <FormattedMessage id={"Announcement.aboutqDunk"} defaultMessage={"About Dunkit Inc."}/>
             </div>
           </div>
           <div className='mt-10 text-base sm:text-lg lg:text-xl'>
-          <FormattedMessage id={"Announcement.ourComp"} defaultMessage={"Our company aims to create a world where people can go to the gym more easily, and offers a subscription-based rental wear service called \"Dunkit Rental Wear\" that allows people to go to the gym empty-handed. We will continue to develop our services to solve the problems in the fitness industry."}/>
+          <FormattedMessage id={"Announcement.ourssComp"} defaultMessage={"Our company aims to create a world where people can go to the gym more easily, and offers a subscription-based rental wear service called \"Dunkit Rental Wear\" that allows people to go to the gym empty-handed. We will continue to develop our services to solve the problems in the fitness industry."}/>
           </div>
         </div>
 
         {/* Company Profile */}
         <div className='text-base sm:text-lg lg:text-xl mb-20 '>
-          <FormattedMessage id={"Announcement.<c>"} defaultMessage={"＜Company Profile＞"}/>
+          <FormattedMessage id={"Announcement.k<c>"} defaultMessage={"＜Company Profile＞"}/>
           <br />
-          <FormattedMessage id={"Announcement.Co.."} defaultMessage={"Company name: Dunkit Co., Ltd."}/>
+          <FormattedMessage id={"Announcement.C1ro.."} defaultMessage={"Company name: Dunkit Co., Ltd."}/>
           <br />
-          <FormattedMessage id={"Announcement.Represent"} defaultMessage={"Representative: Kazuma Kotani"}/>
+          <FormattedMessage id={"Announcement.rRepresent"} defaultMessage={"Representative: Kazuma Kotani"}/>
           <br />
-          <FormattedMessage id={"Announcement.locat"} defaultMessage={"Location: Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo"}/>
+          <FormattedMessage id={"Announcement.rlocat"} defaultMessage={"Location: Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo"}/>
           <br />
-          <FormattedMessage id={"Announcement.established"} defaultMessage={"Established: October 2024"}/>
+          <FormattedMessage id={"Announcement.eestablished"} defaultMessage={"Established: October 2024"}/>
           <br />
-          <FormattedMessage id={"Announcement.buss-desc"} defaultMessage={"Business description: Provision and management of rental items for sports facilities"}/>
+          <FormattedMessage id={"Announcement.rbuss-desc"} defaultMessage={"Business description: Provision and management of rental items for sports facilities"}/>
           <br />
-          <FormattedMessage id={"Announcement.url"} defaultMessage={"URL:"}/>
+          <FormattedMessage id={"Announcement.eurl"} defaultMessage={"URL:"}/>
           
           <a href='https://dunkit.in/company' className='text-blue-700'>
             {' '}https://dunkit.in/company

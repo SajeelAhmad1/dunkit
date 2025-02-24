@@ -1,5 +1,8 @@
 // @/layout/header/index.tsx
 "use client"
+
+// Todo : Translation
+
 import Button from '@/components/button';
 import {
   ArrowRight,
@@ -13,6 +16,7 @@ import {
 } from 'lucide-react';
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { FormattedMessage } from 'react-intl';
 
 type NavMenuSubItem = {
   icon: LucideIcon;
@@ -189,7 +193,7 @@ const Header = () => {
             icon={ArrowRight}
             animation
           >
-            Inquiry
+            <FormattedMessage id={"Header.inquiry"} defaultMessage={"Inquiry"}/>
           </Button>
         </div>
       </header>

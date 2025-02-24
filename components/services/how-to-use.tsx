@@ -50,7 +50,7 @@ const HowToUse = () => {
                             {/* h3 and h5 in one line */}
                             <div className="flex items-center gap-2 md:gap-4">
                                 <h3 className="text-red-800 font-bold">0{index + 1}</h3>
-                                <h5 className="text-red-600 text-2xl font-semibold">{item.heading}</h5>
+                                <h5 className="text-secondary text-2xl font-semibold">{item.heading}</h5>
                             </div>
 
                             {/* Text content */}

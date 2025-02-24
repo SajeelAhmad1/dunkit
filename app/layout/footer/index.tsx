@@ -69,7 +69,7 @@ const Footer = () => {
               href={item.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-red-500 p-2 rounded-full text-white hover:scale-125 transform duration-300 ease-in-out'
+              className='bg-primary p-2 rounded-full text-white hover:scale-125 transform duration-300 ease-in-out'
             >
               <item.icon size={24} />
             </a>
@@ -96,7 +96,7 @@ const Footer = () => {
 
         <div
           onClick={scrollToTop}
-          className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-red-500 w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-red-500 hover:text-red-500 transform duration-300 ease-in-out'
+          className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-primary w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-primary hover:text-primary transform duration-300 ease-in-out'
         >
           <p>
             <FormattedMessage id={"Footer.back"} defaultMessage={"Back to top"}/>

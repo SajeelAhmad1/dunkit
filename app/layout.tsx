@@ -9,7 +9,7 @@ import en from '../lang/en.json';
 import jp from '../lang/jp.json';
 import { IntlProvider } from 'react-intl';
 import "./globals.css";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,6 +17,7 @@ import "aos/dist/aos.css";
 import { Inter } from 'next/font/google';
 
 import LayoutWrapper from './layout-wrapper';
+import { usePathname, useRouter } from "next/navigation";
 const inter = Inter({ subsets: ['latin'] });
 
 
@@ -60,12 +61,13 @@ export default function RootLayout({
   }, []);
 
   const [isDark, setIsDark] = useState(false);
+  const pathname = usePathname();
 
     useEffect(() => {
-      if (typeof window !== 'undefined') {
-        setIsDark(window.location.pathname !== '/');
-      }
-    }, []);
+        setIsDark(
+          pathname !== "/"
+        );
+    }, [pathname]);
 
   useEffect(() => {
     AOS.init({

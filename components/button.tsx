@@ -19,15 +19,15 @@ const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, .
       {/* Animated Background */}
       {animation && (
         <span
-          className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 transform -translate-x-full 
+          className="absolute inset-0 bg-gradient-to-r from-primary to-red-700 transform -translate-x-full 
           group-hover:translate-x-0 transition-all duration-500 ease-in-out"
         ></span>
       )}
 
       {/* Button Text */}
       <span
-        className={`relative z-10 uppercase text-red-500 transition-all duration-300 ease-in-out ${
-          animation ? "group-hover:text-white group-hover:translate-x-2" : "hover:text-red-500"
+        className={`relative z-10 uppercase text-primary transition-all duration-300 ease-in-out ${
+          animation ? "group-hover:text-white group-hover:translate-x-2" : "hover:text-primary"
         }`}
       >
         {children}
@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, .
       {/* Arrow Icon */}
       {Icon && (
         <div
-          className="relative z-10 bg-red-500 rounded-full p-1 text-white transition-all duration-500 
+          className="relative z-10 bg-primary rounded-full p-1 text-white transition-all duration-500 
           group-hover:bg-transparent group-hover:text-transparent "
         >
           <Icon />

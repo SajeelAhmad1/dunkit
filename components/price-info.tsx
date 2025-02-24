@@ -29,7 +29,7 @@ const PriceInfo = () => {
                                 isOwner ? "justify-end" : " justify-start"
                             }`}
                         >
-                            <div className="w-6 h-6 bg-red-600 rounded-full shadow-md"></div>
+                            <div className="w-6 h-6 bg-secondary rounded-full shadow-md"></div>
                         </button>
                         <span className="text-lg font-semibold text-gray-500">
                         <FormattedMessage id={"PriceInfo.gym-ownr"} defaultMessage={"Gym Owner"}/>

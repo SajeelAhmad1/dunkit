@@ -92,7 +92,7 @@ const CompanyProfilePage = () => {
           <FormattedMessage id={"CompnyProfile.compny"} defaultMessage={"Company Profile"}/>
         </h1>
       </div>
-      <div className="lg:mt-[50px] lg:mt-[150px] overflow-hidden ">
+      <div className=" lg:mt-[150px] overflow-hidden ">
   {detail.map((data, i) => (
     <div key={i} className="group ">
       <div className="pt-10 border-b transform scale-y-100 

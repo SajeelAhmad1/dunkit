@@ -155,7 +155,7 @@ const CompanyProfilePage = () => {
             />
           </div> 
         
-        <div className="text-sm px-10 mt-20">
+        <div className="text-sm px-10 mt-20 hidden">
           <FormattedMessage id={"CpompanyProfilePage.1mint"} 
           defaultMessage={" 1 minuts walk from the to Yeasu main entrance of Tokyo Station"}
           />

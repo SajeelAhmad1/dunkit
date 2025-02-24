@@ -76,7 +76,8 @@
   "HomePage.there": "健康のため、ボディーメイクのため、フィットネスをする理由は様々です。しかし日々の運動を習慣化することは一筋縄ではいきません。",
   "HomePage.viewall": "すべて見る",
   "HomePage.we": "私たちはフィットネス施設の利便性を高め、",
-  "HowToUse.Qr": "Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!",
+  "HomePAge.serv-detail":"サービス詳細",
+  "HowToUse.Qr": "DunkitアプリのQRコードスキャン画面を開きます。レンタル品の収納バッグに掲載されているQRコードをアプリでスキャンしたらロックを解除できます！",
   "HowTwoUse.HTDunkit": "Dunkitの使い方",
   "NewsPage.21feb": "２０２５年２月２３日",
   "NewsPage.annunce": "ANNOUNCEMENT",
@@ -139,7 +140,14 @@
   "nav.pricingdetails": "Dunkitレンタルウェアの料金について",
   "nav.reasonsforintroduction": "導入される理由",
   "nav.reasonsforintroductiondetails": "ジムオーナーへのメリットや負担について",
-  "nav.subbasedrentalclothing": "Dunkitレンタルウェアについて"
+  "nav.subbasedrentalclothing": "Dunkitレンタルウェアについて",
+  "HowToUse.ReturnItems": "レンタル品を返却",
+  "HowToUse.ReturnItemsList1": "レンタル品は全て店舗内で返却します。",
+  "HowToUse.ReturnItemsList2": "店舗によって指示が異なる場合がございます。",
+  "HowToUse.ReturnItemsText": "レンタル品を利用し終わったら、アプリの指示に従って返却しましょう。",
+  "HowToUse.ScanQRCode": "QRコードをスキャン",
+  "HowToUse.StartRenting": "レンタルを開始",
+  "HowToUse.StartRentingText": "QRコードを読み込み、バッグのロックが解除されたらそのまま使えます！"
 }
 
 

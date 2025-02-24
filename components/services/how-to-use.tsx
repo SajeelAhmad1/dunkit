@@ -11,23 +11,23 @@ const HowToUse = () => {
     const data = [
         {
             img: "qr.svg",
-            heading: "Scan the QR code",
+            heading: intl.formatMessage({id:"HowToUse.ScanQRCode", defaultMessage:"Scan the QR code"}),
             text: intl.formatMessage({id:"HowToUse.Qr", defaultMessage:"Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!"}),
             list: []
         },
         {
             img: "renting.svg",
-            heading: "Start renting",
-            text: "Just scan the QR code and once the bag is unlocked, you can start using it!",
+            heading: intl.formatMessage({id:"HowToUse.StartRenting", defaultMessage:"Start renting"}),
+            text: intl.formatMessage({id:"HowToUse.StartRentingText", defaultMessage:"Just scan the QR code and once the bag is unlocked, you can start using it!"}),
             list: []
         },
         {
             img: "return.svg",
-            heading: "Return rental items",
-            text: "Once you've finished using the rental items, follow the instructions in the app to return them.",
+            heading: intl.formatMessage({id:"HowToUse.ReturnItems", defaultMessage:"Return rental items"}),
+            text: intl.formatMessage({id:"HowToUse.ReturnItemsText", defaultMessage:"Once you've finished using the rental items, follow the instructions in the app to return them."}),
             list: [
-                "All rental items must be returned at the store.",
-                "Instructions may vary depending on the store."
+                intl.formatMessage({id:"HowToUse.ReturnItemsList1", defaultMessage:"All rental items must be returned at the store."}),
+                intl.formatMessage({id:"HowToUse.ReturnItemsList2", defaultMessage:"Instructions may vary depending on the store."})
             ]
         }
     ];

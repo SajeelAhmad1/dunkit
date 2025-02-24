@@ -6,6 +6,7 @@ interface LayoutProps {
   children: ReactNode;  // Specify the correct type for children
 }
 
+
 export default function Layout({ children }: LayoutProps) {
   return (
     <div>

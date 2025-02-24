@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-family: 'Arial', 'sans-serif';
-  --color-red-500: #ec003c;
+  --font-family: 'Arial', 'sans-serif'; 
 }
 
 @layer base {

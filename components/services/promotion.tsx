@@ -22,7 +22,7 @@ const Promotion = () => {
                     className='flex items-center gap-8 border border border-gray-400 rounded-full px-4 py-2  cursor-pointer bg-white
            hover:bg-gray-100 hover:text-white transform transition-all duration-300 ease-in-out  '
                 >
-                    <p className="text-red-600">
+                    <p className="text-secondary">
                         <FormattedMessage id={"Promotion.pric"} defaultMessage={"Price Information"}/>
                     </p>
                     <div className='rounded-full p-1 bg-gray-300 text-gray-100'>
@@ -30,10 +30,10 @@ const Promotion = () => {
                     </div>
                 </button>
                 <button
-                    className='flex items-center gap-8 rounded-full px-4 py-2  cursor-pointer bg-red-600
+                    className='flex items-center gap-8 rounded-full px-4 py-2  cursor-pointer bg-secondary
            hover:bg-gray-100 hover:text-white transform transition-all duration-300 ease-in-out  '
                 >
-                    <p className="text-white hover:text-red-600">
+                    <p className="text-white hover:text-secondary">
                     <FormattedMessage id={"Promotion.priec"} defaultMessage={" For consultation on implementation, please click here"}/>
                     </p>
                     <div className='rounded-full p-1 bg-gray-300 text-white'>

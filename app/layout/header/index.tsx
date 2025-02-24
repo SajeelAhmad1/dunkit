@@ -18,6 +18,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { FormattedMessage } from 'react-intl';
 import LanguageToggle from '@/components/Elements/LanguageToggle';
+import Image from 'next/image';
 
 type NavMenuSubItem = {
   icon: LucideIcon;
@@ -71,7 +72,7 @@ export const navMenu: NavMenuItem[] = [
   },
 ];
 
-const Header = ({ isDark }: { isDark: Boolean }) => {
+const Header = ({ isDark }: { isDark: boolean }) => {
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter()
@@ -116,8 +117,11 @@ const Header = ({ isDark }: { isDark: Boolean }) => {
         className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
       >
         <div className='flex items-center'>
-          <img
+          <Image
+            // src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
             src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
+            width={200}
+            height={40}
             alt='dunkit logo'
             className='w-[200px] h-[40px]'
           />
@@ -170,7 +174,7 @@ const Header = ({ isDark }: { isDark: Boolean }) => {
                                       key={`${i}-${idx}`}
                                       className='flex items-center gap-4 hover:bg-gray-100 rounded-2xl p-4 cursor-pointer'
                                     >
-                                      <div className='p-2 bg-red-500 rounded-full'>
+                                      <div className='p-2 bg-primary rounded-full'>
                                         {<IconComponent />}
                                       </div>
                                       <div className='flex flex-col'>
@@ -216,8 +220,10 @@ const Header = ({ isDark }: { isDark: Boolean }) => {
       {/* mobile nav */}
       <header className='relative flex lg:hidden items-center justify-between bg-white border-b border-white  px-4 py-2 z-[100]'>
         <div className='flex items-center'>
-          <img
+          <Image
             src='/logo.svg'
+            width={200}
+            height={40}
             alt='dunkit logo'
             className='w-[200px]'
           />

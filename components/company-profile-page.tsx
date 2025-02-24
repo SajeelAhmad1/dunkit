@@ -60,7 +60,7 @@ const CompanyProfilePage = () => {
   
   return (
     <div>
-      <div className='-mt-[100px] hidden lg:flex items-center justify-between'>
+      <div className=' hidden lg:flex items-center justify-between'>
           <div className='flex items-center' 
               data-aos="fade-zoom-in"
               data-aos-easing="ease-in-back"

@@ -21,7 +21,7 @@ const OwnerPriceCard = () => {
                     {initialCost.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}
@@ -50,7 +50,7 @@ const OwnerPriceCard = () => {
                     {operatingCost.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}
@@ -80,7 +80,7 @@ const OwnerPriceCard = () => {
                     {otherExpenses.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}

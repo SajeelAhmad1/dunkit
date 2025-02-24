@@ -22,7 +22,7 @@ const UserPriceCard = () => {
                     {basic.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}
@@ -47,7 +47,7 @@ const UserPriceCard = () => {
                     {plus.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}
@@ -57,8 +57,8 @@ const UserPriceCard = () => {
                 </div>
             </div>
             {/* Pro  */}
-            <div className="w-3/4 md:w-1/4 border-[1.5px] border-red-600 rounded-lg p-4">
-                <span className="text-xs bg-gradient-to-r from-red-600 to-red-700 rounded-full text-white px-2 py-1">
+            <div className="w-3/4 md:w-1/4 border-[1.5px] border-secondary rounded-lg p-4">
+                <span className="text-xs bg-gradient-to-r from-secondary to-red-700 rounded-full text-white px-2 py-1">
                     recommendation
                 </span>
                 <h1 className="text-5xl mt-4">Pro</h1>
@@ -76,7 +76,7 @@ const UserPriceCard = () => {
                     {pro.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-4">
                             {item.available ? (
-                                <Check size={18} className="text-white bg-red-600 p-0.5 rounded-full" />
+                                <Check size={18} className="text-white bg-secondary p-0.5 rounded-full" />
                             ) : (
                                 <Minus size={18} className="text-white bg-gray-400 p-0.5 rounded-full" />
                             )}

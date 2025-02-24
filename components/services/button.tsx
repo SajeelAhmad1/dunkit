@@ -19,7 +19,7 @@ const Button = ({ text, url, active }: ButtonProps) => {
     <button
       onClick={handleClick}
       className={`w-2/3 md:w-[170px] relative border rounded-full px-8 py-4 text-left group overflow-hidden 
-        ${active ? "border-red-600" : "border-gray-300"} hover:border-red-400 cursor-pointer`}
+        ${active ? "border-secondary" : "border-gray-300"} hover:border-red-400 cursor-pointer`}
     >
       <p className="font-medium leading-tight relative z-10 text-black group-hover:text-white transition-colors duration-700">
         {text}

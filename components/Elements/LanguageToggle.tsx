@@ -2,7 +2,7 @@
 import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
 
-const LanguageToggle = ({ style }: any) => {
+const LanguageToggle = ({ style, isDark }: any) => {
   const [selectedLang, _setSelectedLang] = useState('EN');
 
   const setSelectedLang = (lang: string) => {
@@ -18,14 +18,17 @@ const LanguageToggle = ({ style }: any) => {
     }
   }, []);
 
+  const bgClass = isDark ? "bg-[#00000088]" : "bg-[#ffffff88]";
+  const bgClassB = isDark ? "bg-[#00000044]" : "bg-[#ffffff44]";
+
   return (
     <div className={`flex border-4 border-[#00000000]  overflow-hidden`}>
       <button
         onClick={() => setSelectedLang('JP')}
         className={`px-4 py-2 font-pretendardLight text-sm ${
           selectedLang === 'JP'
-            ? ' bg-[#ffffff88]  text-white font-bold'
-            : ' bg-[#ffffff44]  text-white'
+            ? `${bgClass} bg-[#ffffff88]  text-white font-bold`
+            : `${bgClassB}  text-white`
         }`}
       >
         JP

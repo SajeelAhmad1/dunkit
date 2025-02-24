@@ -59,6 +59,14 @@ export default function RootLayout({
     };
   }, []);
 
+  const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setIsDark(window.location.pathname !== '/');
+      }
+    }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1200,  // Animation duration
@@ -68,6 +76,7 @@ export default function RootLayout({
     });
   }, []);
   return (
+
     <html lang="ja">
       <head>
         <link rel="icon" href="/v.png" />
@@ -79,9 +88,8 @@ export default function RootLayout({
           <IntlProvider locale={language} messages={
             (messages as any)[language.toLocaleLowerCase()]
           }>
-          <Header/>
+          <Header isDark={isDark} />
           {children}
-
         </IntlProvider>
           <Footer/>
           </LayoutWrapper>

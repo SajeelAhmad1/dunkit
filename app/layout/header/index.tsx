@@ -71,7 +71,7 @@ export const navMenu: NavMenuItem[] = [
   },
 ];
 
-const Header = () => {
+const Header = ({ isDark }: { isDark: Boolean }) => {
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter()
@@ -105,6 +105,9 @@ const Header = () => {
     setOpenSubMenu(openSubMenu === name ? null : name);
   };
 
+  const textClass = isDark ? "text-black/90" : "text-white";
+  const textClassB = isDark ? "text-black/50" : "text-white/50";
+
   return (
     <>
       {/* desktop nav */}
@@ -114,7 +117,7 @@ const Header = () => {
       >
         <div className='flex items-center'>
           <img
-            src='/logo.svg'
+            src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
             alt='dunkit logo'
             className='w-[200px] h-[40px]'
           />
@@ -130,11 +133,11 @@ const Header = () => {
                     key={i}
                     className={`${({ isActive }: { isActive: boolean }) =>
                       isActive
-                        ? 'relative group px-3 p2y-2 font-bold text-sm text-white '
-                        : 'relative group px-3 py-2 text-sm text-white/50'} cursor-pointer`}
+                        ? `relative group px-3 p2y-2 font-bold text-sm ${textClass} `
+                        : `relative group px-3 py-2 text-sm ${textClassB}`} cursor-pointer`}
                   >
                     <button className='hover:opacity-100 flex items-center gap-1 cursor-pointer'>
-                      <span className='text-sm font-normal hover:font-medium text-white/50 hover:text-white'>
+                      <span className={`text-sm font-normal hover:font-medium ${textClassB} hover:${textClass}`}>
                         {item.name}
                       </span>
                       {item.children && (
@@ -191,7 +194,7 @@ const Header = () => {
                 );
               })}
               <span>
-                <LanguageToggle />
+                <LanguageToggle isDark={isDark}/>
               </span>
             </ul>
           </nav>

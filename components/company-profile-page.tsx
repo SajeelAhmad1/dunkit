@@ -41,17 +41,17 @@ const CompanyProfilePage = () => {
 
   const intoduction = [
     {
-      image:"/hero-section-bg.jpg",
       subTitle:"Representative Director and CEO",
       title:"Kazuma Kotani",
+      image: "/KazumaR.jpg",
       description:`Currently in his third year at the Faculty of Policy Management, Keio University.
       After long-term internships at the Chilean Embassy's Commercial Affairs Section and a foreign financial company, he launched several businesses.
       After noticing the issues that come with going to the gym, he co-founded Dunkit Inc.`
     },
     {
-      image:"/hero-section-bg.jpg",
       subTitle:"Director and CTO",
       title:"Jason Park",
+      image: "/JasonR2.jpg",
       description:`Graduated from the School of International Liberal Studies at Waseda University.
       While still a student, he launched the Waseda University international student community "WasedaTime" and a parking lot business. He has experience in developing and operating various software, including SNS and parking lot service apps.`
     },
@@ -113,11 +113,14 @@ const CompanyProfilePage = () => {
       <div className="mt-[80px] lg:mt-[200px]  flex-col justify-center">
         <div>
           <h1 className="text-2xl lg:text-5xl flex justify-center ">
-            <FormattedMessage id={"CompanyProfilePage.Tokyo"} defaultMessage={"Tokyo Head Office"}/>
+            <FormattedMessage 
+              id={"CompanyProfilePage.Tokyo"} 
+              defaultMessage={"Tokyo Head Office"}
+            />
           </h1>
         </div>
         <div className="flex justify-center  mx-auto  m-3 lg:max-w-[800px] lg:h-[450] ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425289.990533232!2d72.75643905071773!3d33.61625093699602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1740153779582!5m2!1sen!2s" 
+        <iframe src="https://www.google.com/maps?q=35.655384202264415,139.7548247712674&z=15&output=embed" 
         // {style="border:0;"} 
         // {allowfullscreen="" }
         loading="lazy" 
@@ -163,8 +166,10 @@ const CompanyProfilePage = () => {
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',
         }}>
+          <div className="h-full w-full bg-[#00000066] backdrop-blur">
+          
        <MaxWidth>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <h1 className="text-2xl lg:text-5xl font-bold text-white mt-10 lg:mt-44 ">
             <FormattedMessage id={"CompanyProfilePage.executive"} 
             defaultMessage={"Executive Introduction"}/>
@@ -172,11 +177,12 @@ const CompanyProfilePage = () => {
         </div>
         {intoduction.map((item, index)=>(
         <div key={index} className="  grid grid-col-1 gap-4 lg:flex lg:justify-center  lg:grid-cols-2 lg:gap-16 pb-10 mt-20 ">
-          <div className="lg:mx-auto max-w-[800px] h-[200px] lg:w-[330px]  lg:h-[330px]  border-2 border-white text-white">
+          <div className="lg:mx-auto rounded-full overflow-hidden lg:max-w-[800px] h-[100vw] lg:w-[330px]  lg:h-[330px]  border-2 border-white text-white">
+            
             <img
             src={item.image}
             alt=""
-            className="object-fill w-full h-full"
+            className="object-fill w-full"
             />
            
           </div>
@@ -189,7 +195,7 @@ const CompanyProfilePage = () => {
           ))}
           </MaxWidth>
         </div>
-    
+        </div>
     </div>
   )
 }

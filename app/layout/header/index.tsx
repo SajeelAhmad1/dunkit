@@ -17,6 +17,7 @@ import {
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { FormattedMessage } from 'react-intl';
+import LanguageToggle from '@/components/Elements/LanguageToggle';
 
 type NavMenuSubItem = {
   icon: LucideIcon;
@@ -66,11 +67,11 @@ export const navMenu: NavMenuItem[] = [
   },
   {
     name: 'News',
-    path: '/news',
+    path: '/company/news',
   },
 ];
 
-const Header = () => {
+const Header = ({ isDark }: { isDark: Boolean }) => {
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter()
@@ -104,24 +105,27 @@ const Header = () => {
     setOpenSubMenu(openSubMenu === name ? null : name);
   };
 
+  const textClass = isDark ? "text-black/90" : "text-white";
+  const textClassB = isDark ? "text-black/50" : "text-white/50";
+
   return (
     <>
       {/* desktop nav */}
+      <div className='backdrop-blur-sm w-full absolute z-50 border-b border-white'>
       <header
-        className={`hidden lg:flex items-center justify-between relative border-b border-white  px-4 py-1  backdrop-blur-sm z-[100]
-           bg-black/70`}
+        className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
       >
         <div className='flex items-center'>
           <img
-            src='/logo.svg'
+            src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
             alt='dunkit logo'
-            className='w-[250px] h-[60px]'
+            className='w-[200px] h-[40px]'
           />
         </div>
-
+        <div className='flex gap-16'>
         <div className='flex items-center'>
-          <nav className='flex items-center gap-8 '>
-            <ul className='flex items-center justify-center font-semibold'>
+          <nav className='flex items-center gap-12'>
+            <ul className='flex items-center justify-center gap-4 font-semibold'>
               {navMenu?.map((item: NavMenuItem, i: number) => {
                 return (
                   <div
@@ -129,11 +133,11 @@ const Header = () => {
                     key={i}
                     className={`${({ isActive }: { isActive: boolean }) =>
                       isActive
-                        ? 'relative group px-3 p2y-2 font-bold text-sm text-white '
-                        : 'relative group px-3 py-2 text-sm text-white/50'} cursor-pointer`}
+                        ? `relative group px-3 p2y-2 font-bold text-sm ${textClass} `
+                        : `relative group px-3 py-2 text-sm ${textClassB}`} cursor-pointer`}
                   >
                     <button className='hover:opacity-100 flex items-center gap-1 cursor-pointer'>
-                      <span className='text-sm font-normal hover:font-medium text-white/50 hover:text-white'>
+                      <span className={`text-sm font-normal hover:font-medium ${textClassB} hover:${textClass}`}>
                         {item.name}
                       </span>
                       {item.children && (
@@ -145,9 +149,10 @@ const Header = () => {
                     </button>
                     {item.children && item.children?.length > 0 && (
                       <div
-                        className='absolute top-4 -left-0 transition group-hover:translate-y-5
+                        className='fixed top-[30px] left-0 transition group-hover:translate-y-5
                        translate-y-8 opacity- invisible group-hover:opacity-100 group-hover:visible
-                        duration-500 ease-in-out group-hover:transform 2-50 min-w-[568px] transform'
+                        duration-500 ease-in-out group-hover:transform 2-50 min-w-[568px] transform w-screen'
+                        
                       >
                         <div className='relative top-6 p-6 bg-white  shadow-2xl w-full'>
                           <div
@@ -188,6 +193,9 @@ const Header = () => {
                   </div>
                 );
               })}
+              <span>
+                <LanguageToggle isDark={isDark}/>
+              </span>
             </ul>
           </nav>
         </div>
@@ -201,6 +209,7 @@ const Header = () => {
           >
             <FormattedMessage id={"Header.inquiry"} defaultMessage={"Inquiry"}/>
           </Button>
+        </div>
         </div>
       </header>
 
@@ -226,7 +235,7 @@ const Header = () => {
           )}
         </div>
         <div
-          className={`flex flex-col  items-center  lg:hidden fixed  right-0 h-full w-full bg-white shadow-lg transform
+          className={`flex flex-col  items-center  lg:hidden fixed  right-0 h-screen w-full bg-white shadow-lg transform
               ${openMobilNav ? 'top-12 -translate-y-0' : '-translate-y-full'} 
               transition-transform duration-300 ease-in-out z-[200]`}
         >
@@ -298,6 +307,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      </div>
     </>
   );
 };

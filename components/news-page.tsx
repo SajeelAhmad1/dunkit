@@ -1,9 +1,12 @@
 "use client"
+import Link from "next/link";
 import { useRouter } from "next/navigation"
 import { FormattedMessage } from "react-intl";
 
-const NewsPage = () => {
+const NewsPage = ({ news }: any) => {
   const router = useRouter();
+
+  console.log("News", news);
 
   return (
     <div className="min-h-screen">
@@ -46,59 +49,37 @@ const NewsPage = () => {
 
         {/* News grid - adjusted image sizes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-20">
-          {/* First news item */}
+          {news.map((n: any) => {
+            return (
+              <Link href={`news/${n.slug}`}>
           <div className="flex flex-col items-center">
             <div
-              onClick={() => router.push("/news/1")}
               className="cursor-pointer w-full max-w-[400px] md:max-w-[450px] lg:max-w-[600px]">
               <div className="group">
                 <img
-                  src="/News-img-1.png"
+                  src={n.coverImage}
                   alt="Business news"
                   className="w-full h-[180px] sm:h-[220px] md:h-[250px] lg:h-[300px] object-cover border border-gray-300 rounded-2xl transition-transform duration-300 group-hover:scale-[1.02]"
                 />
                 <div className="mt-4 sm:mt-6">
                   <p className="inline-block py-1 px-2 text-xs text-white bg-gray-900 rounded">
-                    <FormattedMessage id={"NewsPage.business"} defaultMessage={"BUSINESS"}/>
+                    {n.author}
                   </p>
                   <h4 className="mt-3 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                    <FormattedMessage id={"NewsPage.inc"} defaultMessage={"Dunit Inc. raises seed round funding"}/>
+                    {n.title}
                   </h4>
                   <p className="mt-2 text-sm text-gray-400">
-                    <FormattedMessage id={"NewsPage.feb"} defaultMessage={"February 21, 2025"}/>
+                    {n.date}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Second news item */}
-          <div className="flex flex-col items-center mt-8 lg:mt-0">
-            <div
-              onClick={() => router.push("/news/2")}
-              className="cursor-pointer w-full max-w-[400px] md:max-w-[450px] lg:max-w-[600px]">
-              <div className="group">
-                <img
-                  src="/news-Announcement.png"
-                  alt="Announcement news"
-                  className="w-full h-[180px] sm:h-[220px] md:h-[250px] lg:h-[300px] object-cover border border-gray-300 rounded-2xl transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-                <div className="mt-4 sm:mt-6">
-                  <p className="inline-block py-1 px-2 text-xs text-white bg-green-700 rounded">
-                    <FormattedMessage id={"NewsPage.annunce"} defaultMessage={"ANNOUNCEMENT"}/>
-                  </p>
-                  <h4 className="mt-3 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">
-                  <FormattedMessage id={"NewsPage.annunce-web"} defaultMessage={"Announcement of corporate website renewal"}/>
-                    
-                  </h4>
-                  <p className="mt-2 text-sm text-gray-500">
-                  <FormattedMessage id={"NewsPage.21feb"} defaultMessage={"February 21, 2025"}/>
-                    
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Link>
+            )
+          })
+}
+          
         </div>
       </div>
 

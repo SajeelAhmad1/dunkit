@@ -49,7 +49,7 @@ export default async function NewsDetail({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <Link
-              href="/company/news"
+              href="/news"
               className="inline-flex items-center space-x-2 text-[#EC003C] hover:text-[#9D0033] transition-colors duration-300"
             >
               <span>←</span>

@@ -81,7 +81,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/v.png" />
       </head>
-      <body className={inter.className}>
+      <body className={geistSans.className}>
         
         <LayoutWrapper>
           

@@ -67,7 +67,7 @@ export const navMenu: NavMenuItem[] = [
   },
   {
     name: 'News',
-    path: '/company/news',
+    path: '/news',
   },
 ];
 

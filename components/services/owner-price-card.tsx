@@ -1,9 +1,38 @@
 "use client"
-import { FormattedMessage } from "react-intl";
-import { initialCost, operatingCost, otherExpenses } from "./owner-plans";
+import { FormattedMessage, useIntl } from "react-intl";
 import { Check, Minus } from "lucide-react";
+import { useMemo } from "react";
 
 const OwnerPriceCard = () => {
+
+    const intl = useIntl();
+
+    const {initialCost, operatingCost, otherExpenses} = useMemo(() => {
+        const initialCost = [
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.purchaseCost", defaultMessage: "Purchase cost" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.freightCharges", defaultMessage: "Freight charges" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.installationFee", defaultMessage: "Installation fee" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.paymentSystemImplementationCosts", defaultMessage: "Payment system implementation costs" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.allOtherInitialCosts", defaultMessage: "All other initial costs" }), available: true },
+        ];
+        const operatingCost = [
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.paymentSystemUsageFee", defaultMessage: "Payment system usage fee" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.collectionWashingAndRefillCosts", defaultMessage: "Collection, washing and refill costs" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.appOperationCosts", defaultMessage: "App operation costs" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.clothingMaintenanceCosts", defaultMessage: "Clothing maintenance costs" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.allOtherOperatingCosts", defaultMessage: "All other operating costs" }), available: true },
+        ];
+        const otherExpenses = [
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.damageFeeForRentalItems", defaultMessage: "Damage fee for rental items *" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.theftOrLossOfRentalItems", defaultMessage: "Theft or loss of rental items *" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.damageToStorageShelves", defaultMessage: "Damage to storage shelves *" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.inquiryReceptionFee", defaultMessage: "Inquiry reception fee" }), available: true },
+            { feature: intl.formatMessage({ id: "OwnerPriceCard.allOtherExpenses", defaultMessage: "All other expenses" }), available: true },
+        ];
+          
+          return { initialCost, operatingCost, otherExpenses };
+    }, [intl]);        
+
     return (
         <div className="flex flex-col md:flex-row items-center md:justify-center space-x-0 md:space-x-6 space-y-4 md:space-y-0">
             {/* Initial cost    */}

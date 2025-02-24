@@ -15,7 +15,7 @@ const ServicesIntro = ({ text }: ServicesIntroProps) => {
           {text}
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center md:justify-center space-y-2 md:space-x-12">
+      <div className="flex flex-col md:flex-row items-center md:justify-center space-y-2 md:space-x-24">
           <Button 
           text= {intl.formatMessage({id:"ServicesIntro.ser-detail", defaultMessage:"Service Details"})}
           url={"service"} />

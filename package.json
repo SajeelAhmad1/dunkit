@@ -17,7 +17,12 @@
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
+    "resend": "^4.1.2",
+    "sonner": "^2.0.1"
+=======
     "react-intl": "^7.0.1"
+>>>>>>> abd745c7bf3cf760ff02356aaadb427b281cd82a
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

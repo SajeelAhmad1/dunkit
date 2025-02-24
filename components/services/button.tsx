@@ -18,11 +18,11 @@ const Button = ({text, url}: ButtonProps) => {
   return (
     <button
       onClick={() => handleClick(url)}
-      className="w-2/3 md:w-[150px] relative border border-black hover:border-red-600 hover:cursor-pointer rounded-full px-8 py-4 text-left group overflow-hidden"
+      className="w-2/3 md:w-[170px] relative border border-black hover:border-red-600 hover:cursor-pointer rounded-full px-8 py-4 text-left group overflow-hidden"
     >
-      <span className="relative z-10 text-black group-hover:text-white transition-colors duration-700">
+      <p className="font-bold leading-tight relative z-10 text-black group-hover:text-white transition-colors duration-700">
         {text}
-      </span>
+      </p>
       <svg
         className="absolute inset-0 w-full h-full"
         preserveAspectRatio="none"

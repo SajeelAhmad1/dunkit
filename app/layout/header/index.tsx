@@ -232,7 +232,7 @@ const Header = () => {
           )}
         </div>
         <div
-          className={`flex flex-col  items-center  lg:hidden fixed  right-0 h-full w-full bg-white shadow-lg transform
+          className={`flex flex-col  items-center  lg:hidden fixed  right-0 h-screen w-full bg-white shadow-lg transform
               ${openMobilNav ? 'top-12 -translate-y-0' : '-translate-y-full'} 
               transition-transform duration-300 ease-in-out z-[200]`}
         >

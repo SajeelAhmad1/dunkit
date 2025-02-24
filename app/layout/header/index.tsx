@@ -63,7 +63,7 @@ export const navMenu: NavMenuItem[] = [
   },
 ];
 
-const Header = ({isDark}: {isDark: boolean}) => {
+const Header = ({ isDark }: { isDark: boolean }) => {
   const pathname = usePathname();
   // Check if a route is active
   const isActive = (path: string) => pathname === path;
@@ -75,8 +75,6 @@ const Header = ({isDark}: {isDark: boolean}) => {
     event.stopPropagation();
     router.push(path);
   };
-
- 
 
   const handleToggleMobileNav = () => {
     setOpenMobilNav(!openMobilNav);
@@ -215,17 +213,20 @@ const Header = ({isDark}: {isDark: boolean}) => {
             </div>
             <div
               onClick={() => router.push('/contact')}
-              className=''
+              className='relative cursor-pointer px-5 py-2 flex items-center gap-8 border border-gray-400 rounded-full bg-white
+                       overflow-hidden transition-all duration-700 ease-in-out group'
             >
-              <Button
-                icon={ArrowRight}
-                animation
-              >
+              <span
+                className='absolute inset-0 bg-gradient-primary transform -translate-x-full 
+                  group-hover:translate-x-0 transition-all duration-500 ease-in-out'
+              ></span>
+              <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2'>
+                <Image width={20} height={20} src={"/right-arrow.svg"} alt={'dunkit arrow'} />
                 <FormattedMessage
                   id={'Header.inquiry'}
                   defaultMessage={'Inquiry'}
                 />
-              </Button>
+              </button>
             </div>
           </div>
         </header>

@@ -10,7 +10,7 @@ const ExpComp = () => {
         <div className='flex flex-wrap items-center justify-center md:justify-between '>
           <div className='w-full md:w-[60%]'>
             <h4 className=' font-bold mb-4'>
-              <FormattedMessage id={"ExopComp.takegym"} defaultMessage={"Take your gym experience to the next level"}/>
+              <FormattedMessage id={"ExopComp.takeyourgym"} defaultMessage={"Take your gym experience to the next level"}/>
             </h4>
             <p className='text-lg mt-4 '>
               <FormattedMessage id={"ExpComp.month"}

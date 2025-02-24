@@ -1,6 +1,7 @@
 "use client"
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { FormattedMessage } from "react-intl";
 
 const Inquiries = () => {
     const router = useRouter();
@@ -14,14 +15,18 @@ const Inquiries = () => {
       {/* Content on top of the blur */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="p-8 flex flex-col items-center space-y-6 text-white">
-          <h1 className="text-3xl font-semibold text-center">Inquiries regarding implementation</h1>
+          <h1 className="text-3xl font-semibold text-center">
+            <FormattedMessage id={"inquiry.regard"} defaultMessage={"Inquiries regarding implementation"}/>
+          </h1>
           <button
           onClick={() => router.push("/contact")}
           className="space-x-8 flex items-center border border-white px-16 py-2 bg-white/20 backdrop-blur-md hover:bg-white/30 transition duration-300">
             <div className="p-1">
               <ArrowRight />
             </div>
-            <div className="underline text-xl">Inquiry</div>
+            <div className="underline text-xl">
+            <FormattedMessage id={"inquiry.IQ"} defaultMessage={"Inquiry"}/>
+            </div>
           </button>
         </div>
       </div>

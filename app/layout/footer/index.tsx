@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            <FormattedMessage id={"Footer.hamamatsucho"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
+            <FormattedMessage id={"Footer.hamama"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const Footer = () => {
           className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-red-500 w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-red-500 hover:text-red-500 transform duration-300 ease-in-out'
         >
           <p>
-            <FormattedMessage id={"Footer.back"} defaultMessage={"Back to top"}/>
+            <FormattedMessage id={"Footer.backto"} defaultMessage={"Back to top"}/>
           </p>
         </div>
       </MaxWidth>

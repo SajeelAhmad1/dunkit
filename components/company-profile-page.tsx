@@ -89,10 +89,10 @@ const CompanyProfilePage = () => {
     <div className="px-4 py-2 lg:px-6 max-w-[800px] mx-auto ">
       <div className="flex justify-center">
         <h1 className=" text-3xl lg:text-7xl ">
-          <FormattedMessage id={"CompnyProfile.company"} defaultMessage={"Company Profile"}/>
+          <FormattedMessage id={"CompnyProfile.compny"} defaultMessage={"Company Profile"}/>
         </h1>
       </div>
-      <div className="lg:mt-[50px] lg:mt-[150px] overflow-hidden ">
+      <div className=" lg:mt-[150px] overflow-hidden ">
   {detail.map((data, i) => (
     <div key={i} className="group ">
       <div className="pt-10 border-b transform scale-y-100 

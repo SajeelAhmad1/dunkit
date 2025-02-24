@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            <FormattedMessage id={"Footer.hamamatsucho"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
+            <FormattedMessage id={"Footer.hams"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
           </p>
         </div>
 

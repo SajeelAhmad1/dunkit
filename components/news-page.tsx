@@ -43,7 +43,7 @@ const NewsPage = ({ news }: any) => {
         {/* Page title */}
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-            <FormattedMessage id={"NewsPage.news"} defaultMessage={"News"}/>
+            <FormattedMessage id={"NewsPage.titalnews"} defaultMessage={"News"}/>
           </h1>
         </div>
 

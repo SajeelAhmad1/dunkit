@@ -103,11 +103,15 @@
   "nav.Home": "Home",
   "nav.News": "News",
   "nav.Services": "Services",
+  "nav.companyProfile": "Company Profile",
   "nav.detailsrental": "Details and features of the subscription-based rental clothing, shoes, and towels",
+  "nav.home": "Home",
+  "nav.news": "News",
   "nav.pricing": "Price Information",
   "nav.pricingdetails": "Dunkit rental clothing prices",
   "nav.reasonsforintroduction": "Reasons for introduction",
   "nav.reasonsforintroductiondetails": "Benefits and burdens for gym owners",
-  "nav.subbasedrentalclothing": "About Dunkit Rental Wear",
+  "nav.services": "Services",
+  "nav.subbasedrentalclothing": "Subscription-based rental clothing",
   "team.sectionTitle": "役員紹介"
 }

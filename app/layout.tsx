@@ -92,8 +92,9 @@ export default function RootLayout({
           }>
           <Header isDark={isDark} />
           {children}
-        </IntlProvider>
           <Footer/>
+
+        </IntlProvider>
           </LayoutWrapper>
       </body>
     </html>

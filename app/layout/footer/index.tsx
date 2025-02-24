@@ -12,7 +12,8 @@ import {
   LucideIcon,
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { FormattedMessage } from 'react-intl';
+import { useMemo } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const socialLinks: { icon: LucideIcon; url: string }[] = [
   { icon: Link2, url: '#' },
@@ -27,29 +28,30 @@ type NavMenuItem = {
   path: string;
 };
 
-export const navMenu: NavMenuItem[] = [
-  {
-    name: 'Home',
-    path: '/',
-  },
-  {
-    name: 'Sevices',
-    path: '/service',
-  },
-  {
-    name: 'Company Profile',
-    path: '/company-profile',
-  },
-  {
-    name: 'News',
-    path: '/news',
-  },
-];
-
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  const intl = useIntl();
+
+  const navMenu = useMemo(() => [
+    {
+      name: intl.formatMessage({ id: 'nav.Home', defaultMessage: 'Home' }),
+      path: '/',
+    },
+    {
+      name: intl.formatMessage({ id: 'nav.Services', defaultMessage: 'Services' }),
+      path: '/service',
+    },
+    {
+      name: intl.formatMessage({ id: 'nav.CompanyProfile', defaultMessage: 'Company Profile' }),
+      path: '/company-profile',
+    },
+    {
+      name: intl.formatMessage({ id: 'nav.News', defaultMessage: 'News' }),
+      path: '/news',
+    },
+  ], [intl]);
 
   const router = useRouter();
   return (
@@ -81,7 +83,7 @@ const Footer = () => {
               <div
                 onClick={() => router.push(item.path)}
                 key={i}
-                className=' hover:underline '
+                className=' hover:underline cursor-pointer'
               >
                 <span>{item.name}</span>
               </div>

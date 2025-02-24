@@ -67,7 +67,7 @@ const BusinessNews = () => {
           <div className='text-xl'>
           <FormattedMessage id={"Announcement.c"} defaultMessage={"＜Company Profile＞"}/>
           <br />
-          <FormattedMessage id={"Announcement.Co.."} defaultMessage={"Comany name: Dunkit Co., Ltd."}/>
+          <FormattedMessage id={"Announcement.Co"} defaultMessage={"Comany name: Dunkit Co., Ltd."}/>
           <br />
           <FormattedMessage id={"Announcement.Represent"} defaultMessage={"Representative: Kazuma Kotani"}/>
           <br />
@@ -75,7 +75,7 @@ const BusinessNews = () => {
           <br />
           <FormattedMessage id={"Announcement.established"} defaultMessage={"Established: October 2024"}/>
           <br />
-          <FormattedMessage id={"Announcement.buss-desc"} defaultMessage={"Business description: Provision and management of rental items for sports facilities"}/>
+          <FormattedMessage id={"Announcement.bussdesc"} defaultMessage={"Business description: Provision and management of rental items for sports facilities"}/>
           <br />
           <FormattedMessage id={"Announcement.url"} defaultMessage={"URL:"}/>
              <a href="https://dunkit.in/company" className='text-blue-700'>https://dunkit.in/company</a>

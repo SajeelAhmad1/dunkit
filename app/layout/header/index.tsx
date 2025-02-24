@@ -112,7 +112,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
   return (
     <>
       {/* desktop nav */}
-      <div className='backdrop-blur-sm w-full absolute z-50 border-b border-white'>
+      <div className='backdrop-blur-sm w-full absolute z-[999] border-b border-white'>
       <header
         className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
       >
@@ -147,7 +147,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
                       {item.children && (
                         <ChevronDown
                           size={16}
-                          className='group-hover:rotate-180 transform duration-500 ease-in-out'
+                          className={`group-hover:rotate-180 transform duration-500 ease-in-out ${textClassB}`}
                         />
                       )}
                     </button>
@@ -271,7 +271,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
                     {item.children && (
                       <button onClick={() => handleToggleSubMenu(item.name)}>
                         <ChevronDown
-                          className={`transform transition-transform ${openSubMenu === item.name ? 'rotate-180' : ''
+                          className={`transform text-white transition-transform ${openSubMenu === item.name ? 'rotate-180' : ''
                             }`}
                         />
                       </button>

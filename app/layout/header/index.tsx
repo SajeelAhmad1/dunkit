@@ -243,9 +243,6 @@ const Header = ({ isDark }: { isDark: boolean }) => {
                       </div>
                     );
                   })}
-                  <span>
-                    <LanguageToggle isDark={isDark} />
-                  </span>
                 </ul>
               </nav>
             </div>

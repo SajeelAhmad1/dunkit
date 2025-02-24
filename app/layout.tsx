@@ -36,7 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
 
-  const [language, setLanguage] = useState('EN');
+  const [language, setLanguage] = useState('JP');
 
 
   useEffect(() => {
@@ -87,9 +87,7 @@ export default function RootLayout({
         
         <LayoutWrapper>
           
-          <IntlProvider locale={language} messages={
-            (messages as any)[language.toLocaleLowerCase()]
-          }>
+          <IntlProvider locale={language} messages={jp}>
           <Header isDark={isDark} />
           {children}
           <Footer/>

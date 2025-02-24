@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Link from 'next/link';
-import { getAllNewsItems, getNewsItem } from '@/utils/news';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Markdown from 'react-markdown';
-import { formatDate } from '@/utils/formateDate';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
+import { getAllNewsItems, getNewsItem } from "@/utils/news";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Markdown from "react-markdown";
+import { formatDate } from "@/utils/formateDate";
 
 export async function generateMetadata({
   params,
@@ -49,7 +49,7 @@ export default async function NewsDetail({
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <Link
-              href="/company/news"
+              href="/news"
               className="inline-flex items-center space-x-2 text-[#EC003C] hover:text-[#9D0033] transition-colors duration-300"
             >
               <span>←</span>

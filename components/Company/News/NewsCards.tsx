@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import type { NewsItem } from '@/types';
-import { formatDate } from '@/utils/formateDate';
+import Link from "next/link";
+import type { NewsItem } from "@/types";
+import { formatDate } from "@/utils/formateDate";
 
 export default function NewsCard({ news }: { news: NewsItem }) {
   return (
     <Link
-      href={`/company/news/${news.slug}`}
+      href={`/news/${news.slug}`}
       className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-lg transition-all duration-300"
     >
       <div className="aspect-h-9 aspect-w-16 bg-gray-100 overflow-hidden">

@@ -1,3 +1,5 @@
+"use client"
+import { FormattedMessage } from "react-intl";
 import { basic, plus, pro } from "./user-plans";
 import { Check, Minus } from "lucide-react";
 
@@ -7,9 +9,11 @@ const UserPriceCard = () => {
             {/* Basic Plan  */}
             <div className="w-3/4 md:w-1/4 border border-gray-300 rounded-lg p-4 py-8">
                 <h1 className="text-5xl">Basic</h1>
-                <p className="text-lg font-medium mt-2">1,480 yen/month (excluding tax)</p>
+                <p className="text-lg font-medium mt-2">1,480 yen/month 
+                    <FormattedMessage id={"UserPriceCard/exclud"} defaultMessage={"(excluding tax)"}/>
+                </p>
                 <p className="text-gray-400 mt-2">
-                    A plan for light gym users who want to train casually at the gym
+                <FormattedMessage id={"UserPriceCard.plan-lightgym"} defaultMessage={"A plan for light gym users who want to train casually at the gym"}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />
@@ -30,10 +34,11 @@ const UserPriceCard = () => {
             {/* Plus  */}
             <div className="w-3/4 md:w-1/4 border border-gray-300 rounded-lg p-4 py-8">
                 <h1 className="text-5xl">Plus</h1>
-                <p className="text-lg font-medium mt-2">1,980 yen/month (excluding tax)
+                <p className="text-lg font-medium mt-2">1,980 yen/month 
+                <FormattedMessage id={"UserPriceCard.exclud-puls"} defaultMessage={"(excluding tax)"}/>
                 </p>
                 <p className="text-gray-400 mt-2">
-                    A plan for gym goers who want to train at a high level
+                <FormattedMessage id={"UserPriceCard.plan-gym"} defaultMessage={"A plan for gym goers who want to train at a high level"}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />
@@ -57,11 +62,12 @@ const UserPriceCard = () => {
                     recommendation
                 </span>
                 <h1 className="text-5xl mt-4">Pro</h1>
-                <p className="text-lg font-medium mt-2">2,480 yen/month (excluding tax)
+                <p className="text-lg font-medium mt-2">2,480 yen/month 
+                <FormattedMessage id={"UserPriceCard.exclud-pro"} defaultMessage={"(excluding tax)"}/>
 
                 </p>
                 <p className="text-gray-400 mt-2">
-                    A plan for advanced gym users who want to get serious about their training at any time.
+                <FormattedMessage id={"UserPriceCrad.a-plan"} defaultMessage={"A plan for advanced gym users who want to get serious about their training at any time."}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />

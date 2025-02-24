@@ -1,3 +1,5 @@
+"use client"
+import { FormattedMessage } from "react-intl";
 import { initialCost, operatingCost, otherExpenses } from "./owner-plans";
 import { Check, Minus } from "lucide-react";
 
@@ -6,11 +8,11 @@ const OwnerPriceCard = () => {
         <div className="flex flex-col md:flex-row items-center md:justify-center space-x-0 md:space-x-6 space-y-4 md:space-y-0">
             {/* Initial cost    */}
             <div className="w-3/4 md:w-1/4 border border-gray-300 rounded-lg p-4 py-12">
-                <h1 className="text-4xl">Initial cost
-
+                <h1 className="text-4xl">
+                    <FormattedMessage id={"OwnerPriceCard.intitial"} defaultMessage={"Initial cost"}/>
                 </h1>
                 <p className="text-gray-400 mt-2">
-                    All costs involved in introducing Dunkit Rental Wear
+                <FormattedMessage id={"OwnerPriceCard.all-cost"} defaultMessage={"All costs involved in introducing Dunkit Rental Wear"}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />
@@ -28,15 +30,18 @@ const OwnerPriceCard = () => {
                     ))}
                 </div>
                 <h2 className="mt-8 flex justify-center text-4xl">
-                    0 Yen
+                    0
+                    <FormattedMessage id={"OwnerPriceCread.yen1"} defaultMessage={"Yen"}/>
                 </h2>
             </div>
             {/* Operating costs */}
             <div className="w-3/4 md:w-1/4 border border-gray-300 rounded-lg p-4 py-12">
-                <h1 className="text-4xl">Operating costs
+                <h1 className="text-4xl">
+                <FormattedMessage id={"OwnerPriceCard.oprat"} defaultMessage={"Operating costs"}/>
                 </h1>
                 <p className="text-gray-400 mt-2">
-                    All costs incurred in providing Dunkit Rental Wear services
+                <FormattedMessage id={"OwnerPriceCard.oprat-rent"} 
+                defaultMessage={" All costs incurred in providing Dunkit Rental Wear services"}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />
@@ -54,17 +59,19 @@ const OwnerPriceCard = () => {
                     ))}
                 </div>
                 <h2 className="mt-8 flex justify-center text-4xl">
-                    0 Yen
+                    0 
+                    <FormattedMessage id={"OwnerPriceCread.yen2"} defaultMessage={"Yen"}/>
                 </h2>
             </div>
             {/* Other expenses  */}
             <div className="w-3/4 md:w-1/4 border border-gray-300 rounded-lg p-4 py-12">
 
-                <h1 className="text-4xl">Other expenses
+                <h1 className="text-4xl">
+                <FormattedMessage id={"OwnerPriceCard.other"} defaultMessage={"Other expenses"}/>
                 </h1>
 
                 <p className="text-gray-400 mt-2">
-                    All costs incurred in the process of providing Dunkit rental clothing
+                <FormattedMessage id={"OwnerPriceCard.incurred"} defaultMessage={" All costs incurred in the process of providing Dunkit rental clothing"}/>
                 </p>
 
                 <hr className="mt-4 w-1/8 text-gray-300" />
@@ -82,7 +89,8 @@ const OwnerPriceCard = () => {
                     ))}
                 </div>
                 <h2 className="mt-8 flex justify-center text-4xl">
-                    0 Yen
+                    0 
+                    <FormattedMessage id={"OwnerPriceCread.yen3"} defaultMessage={"Yen"}/>
                 </h2>
             </div>
         </div>

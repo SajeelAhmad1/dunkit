@@ -1,3 +1,9 @@
+'use client'
+
+import { FormattedMessage } from "react-intl"
+
+// Todo: Translation
+
 const FeaturesExp = () => {
 
     const data = [
@@ -21,8 +27,10 @@ const FeaturesExp = () => {
     return (
         <div className="w-full flex flex-col items-center space-y-10 md:space-y-0">
             <div className="flex flex-col items-center space-y-4">
-                <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">
-                    Learn more about Dunkit&apos;s features
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">
+                    <FormattedMessage id={"FeaturesExp.learn"} 
+                    defaultMessage={"Learn more about Dunkit\'s features"}
+                    />
                 </h1>
 
             </div>

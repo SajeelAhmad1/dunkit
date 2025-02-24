@@ -1,3 +1,5 @@
+'use client'
+import { FormattedMessage } from 'react-intl';
 import MaxWidth from '../max-width';
 import MobApp from "@/public/mob.svg"
 
@@ -8,12 +10,12 @@ const ExpComp = () => {
         <div className='flex flex-wrap items-center justify-center md:justify-between '>
           <div className='w-full md:w-[60%]'>
             <h4 className=' font-bold mb-4'>
-              Take your gym experience to the next level
+              <FormattedMessage id={"ExopComp.takegym"} defaultMessage={"Take your gym experience to the next level"}/>
             </h4>
             <p className='text-lg mt-4 '>
-              Dunkit is a monthly flat-rate rental service for tops, bottoms,
-              towels, shoes, and socks. By subscribing to a plan, you can enjoy
-              irreversible convenience and go to the gym empty-handed.
+              <FormattedMessage id={"ExpComp.month"}
+              defaultMessage={" Dunkit is a monthly flat-rate rental service for tops, bottoms,towels, shoes, and socks. By subscribing to a plan, you can enjoyirreversible convenience and go to the gym empty-handed."}
+              />
             </p>
           </div>
           <div className='relative mt-10 lg:mt-0'>

@@ -4,10 +4,14 @@ import ServicesIntro from "@/components/services/service-intro";
 import GymUserPrice from "@/components/services/gym-user-price";
 import OwnerPriceCard from "@/components/services/owner-price-card";
 import Inquiries from "@/components/services/inquiries";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const PriceInfo = () => {
+
+    const intl = useIntl();
+
     const [isOwner, setIsOwner] = useState(false);
-    const text = "Price information";
+    const text = intl.formatMessage({id:"PriceInfo.PInfo", defaultMessage:"Price information"})
 
     return (
         <div className=" flex flex-col">
@@ -17,7 +21,7 @@ const PriceInfo = () => {
 
                     <div className="flex justify-center space-x-4 ">
                         <span className="text-lg font-semibold text-gray-500">
-                            Gym User
+                            <FormattedMessage id={"PriceInfo.gtm"} defaultMessage={"Gym User"}/>
                         </span>
                         <button
                             onClick={() => setIsOwner(!isOwner)}
@@ -28,12 +32,14 @@ const PriceInfo = () => {
                             <div className="w-6 h-6 bg-red-600 rounded-full shadow-md"></div>
                         </button>
                         <span className="text-lg font-semibold text-gray-500">
-                            Gym Owner
+                        <FormattedMessage id={"PriceInfo.gym-ownr"} defaultMessage={"Gym Owner"}/>
+                            
                         </span>
                     </div>
 
                     {isOwner ? <OwnerPriceCard/> : <GymUserPrice /> }
-                    <p className="px-4 md:px-0 mb-40 flex justify-center">* Excluding cases where the store is clearly negligent regarding damage or theft of clothing.
+                    <p className="px-4 md:px-0 mb-40 flex justify-center">
+                        <FormattedMessage id={'PriceInfo.exclude'} defaultMessage={"* Excluding cases where the store is clearly negligent regarding damage or theft of clothing."}/>
                     </p>
                 <Inquiries/>
                 </div>

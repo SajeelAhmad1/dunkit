@@ -1,6 +1,9 @@
 //@/pages/company-profile.tsx
+'use client'
 
+//Todo: translation
 import MaxWidth from "@/components/max-width"
+import { FormattedMessage } from "react-intl"
 
 const CompanyProfilePage = () => {
 
@@ -85,7 +88,9 @@ const CompanyProfilePage = () => {
         </div>
     <div className="px-4 py-2 lg:px-6 max-w-[800px] mx-auto ">
       <div className="flex justify-center">
-        <h1 className=" text-3xl lg:text-7xl ">Company Profile</h1>
+        <h1 className=" text-3xl lg:text-7xl ">
+          <FormattedMessage id={"CompnyProfile.company"} defaultMessage={"Company Profile"}/>
+        </h1>
       </div>
       <div className="lg:mt-[50px] lg:mt-[150px] overflow-hidden ">
   {detail.map((data, i) => (
@@ -93,7 +98,11 @@ const CompanyProfilePage = () => {
       <div className="pt-10 border-b transform scale-y-100 
           group-hover:scale-y-125 transition-transform duration-400 ease-in-out hover:bg-gray-50">
         <div className="px-5 flex gap-7 lg:gap-48 pb-10  flex-col lg:flex-row">
-          <h5 className=" font-bold">{data.Name}</h5>
+          <h5 className=" font-bold">
+            <FormattedMessage id={"CompanyProfile.data"} 
+            defaultMessage={"{value}"} 
+            values={{value:data.Name}}/>
+            </h5>
           <h6 className="">{data.description}</h6>
         </div>
       </div>
@@ -103,7 +112,9 @@ const CompanyProfilePage = () => {
 
       <div className="mt-[80px] lg:mt-[200px]  flex-col justify-center">
         <div>
-          <h1 className="text-2xl lg:text-5xl flex justify-center ">Tokyo Head Office</h1>
+          <h1 className="text-2xl lg:text-5xl flex justify-center ">
+            <FormattedMessage id={"CompanyProfilePage.Tokyo"} defaultMessage={"Tokyo Head Office"}/>
+          </h1>
         </div>
         <div className="flex justify-center  mx-auto  m-3 lg:max-w-[800px] lg:h-[450] ">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425289.990533232!2d72.75643905071773!3d33.61625093699602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1740153779582!5m2!1sen!2s" 
@@ -117,7 +128,7 @@ const CompanyProfilePage = () => {
         </iframe>
         
         </div>
-            <div className='-mt-[200px] hidden lg:block  items-center absolute top-[2000px] left-0'
+            <div className='-mt-[200px] hidden lg:block  items-center absolute top-[1900px] left-0'
            data-aos="fade-zoom-in"
            data-aos-easing="ease-in-back"
            data-aos-delay="100"
@@ -129,7 +140,7 @@ const CompanyProfilePage = () => {
               className='w-[250px]'
             />
           </div>
-          <div className='hidden lg:block  items-center absolute top-[1710px] lg:top-[1930px] right-0' 
+          <div className='hidden lg:block  items-center absolute  top-[1770px] right-0' 
            data-aos="zoom-in"
           >
             <img
@@ -139,8 +150,10 @@ const CompanyProfilePage = () => {
             />
           </div> 
         
-        <div className="text-sm px-10">
-          1 minuts walk from the to Yeasu main entrance of Tokyo Station
+        <div className="text-sm px-10 mt-20">
+          <FormattedMessage id={"CpompanyProfilePage.1minit"} 
+          defaultMessage={" 1 minuts walk from the to Yeasu main entrance of Tokyo Station"}
+          />
         </div>
       </div>
       
@@ -153,7 +166,8 @@ const CompanyProfilePage = () => {
        <MaxWidth>
         <div className="flex justify-center ">
           <h1 className="text-2xl lg:text-5xl font-bold text-white mt-10 lg:mt-44 ">
-            Executive Introduction
+            <FormattedMessage id={"CompanyProfilePage.executive"} 
+            defaultMessage={"Executive Introduction"}/>
           </h1>
         </div>
         {intoduction.map((item, index)=>(

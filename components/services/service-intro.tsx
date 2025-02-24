@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Button from "@/components/services/button";
+import { useIntl } from "react-intl"
 
 interface ServicesIntroProps {
   text: string;
@@ -10,6 +11,7 @@ interface ServicesIntroProps {
 const ServicesIntro = ({ text }: ServicesIntroProps) => {
   const pathname = usePathname(); // Get current route
 
+    const intl = useIntl();
   return (
     <div>
       <div className="py-8 flex flex-col items-center justify-center">
@@ -19,9 +21,15 @@ const ServicesIntro = ({ text }: ServicesIntroProps) => {
 
       {/* Buttons */}
       <div className="flex flex-col md:flex-row items-center md:justify-center space-y-2 md:space-x-24">
-        <Button text="Service Details" url="service" active={pathname.includes("service")} />
-        <Button text="Reasons for Introduction" url="installment" active={pathname.includes("installment")} />
-        <Button text="Price Information" url="pricing" active={pathname.includes("pricing")} />
+          <Button 
+          text= {intl.formatMessage({id:"ServicesIntro.ser-detail", defaultMessage:"Service Details"})}
+          url={"service"} />
+          <Button 
+          text= {intl.formatMessage({id:"ServicesIntro.reson-intro", defaultMessage:"Reasons for Introduction"})}
+           url={"installment"} />
+          <Button 
+          text={intl.formatMessage({id:"ServicesIntro.price-info", defaultMessage:"Price Information"})} 
+          url={"pricing"} />
       </div>
     </div>
   );

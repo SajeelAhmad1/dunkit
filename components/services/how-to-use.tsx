@@ -1,9 +1,18 @@
+'use client'
+import { useIntl } from "react-intl";
+// Todo: translation
+
+import { FormattedMessage,  } from "react-intl";
+
 const HowToUse = () => {
+
+        const intl =  useIntl();
+
     const data = [
         {
             img: "qr.svg",
             heading: "Scan the QR code",
-            text: "Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!",
+            text: intl.formatMessage({id:"HowToUse.Qr", defaultMessage:"Open the QR code scanning screen of the Dunkit app. Scan the QR code on the storage bag of your rental item with the app to unlock it!"}),
             list: []
         },
         {
@@ -24,12 +33,14 @@ const HowToUse = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 ">
-            {/* <h3 className="mt-4 md:mt-24 mb-0 md:mb-4 font-bold mb-8">How to use Dunkit</h3> */}
-            <div className="mt-10 flex flex-col gap-16 md:gap-28">
+        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+            <h2 className="font-bold mb-8">
+                <FormattedMessage id={"HowTwoUse.HTDunkit"} defaultMessage={"How to use Dunkit"}/>
+            </h2>
+            <div className="mt-10 flex flex-col gap-10">
                 {data.map((item, index) => (
-                    <div
-                        className="flex flex-col md:flex-row items-center items-center w-full "
+                    <div 
+                        className="flex flex-col md:flex-row  items-center w-full space-y-8" 
                         key={index}
                     >
                         <div className="w-3/4 md:w-[50%] mb-4md:mb-0">

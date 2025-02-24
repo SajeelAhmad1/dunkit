@@ -36,7 +36,6 @@
   "BusinessNews.what": "What is \"Dunkit\"",
   "CompanyProfile.data": "{value}",
   "CompanyProfilePage.Tokyo": "Tokyo Head Office",
-  "CompanyProfilePage.executive": "役員紹介",
   "CompnyProfile.compny": "会社概要",
   "CpompanyProfilePage.1minit": "1 minuts walk from the to Yeasu main entrance of Tokyo Station",
   "ExopComp.takeyourgym": "ジムの利便性を次のレベルに引き上げる",
@@ -159,8 +158,31 @@
   "FeaturesExp.noOperation.heading": "オペレーションなし",
   "FeaturesExp.noOperation.text": "サービス運営にかかる回収・洗濯・補充の作業を全て弊社側で行います。また完全無人レンタルサービスですので、24時間265日スタッフの手を借りずに運営可能です。",
   "FeaturesExp.revenueShare.heading": "レベニューシェア",
-  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。"
-  
+  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。",
+  "CompanyProfilePag.Tokyo": "東京本社",
+  "CompanyProfilePage.BusContant": "Business Contents",
+  "CompanyProfilePage.Cname": "会社名　",
+  "CompanyProfilePage.Cto": "Director and CTO",
+  "CompanyProfilePage.Xtech": "XTech Ventures, Management Team",
+  "CompanyProfilePage.cap": "Capital",
+  "CompanyProfilePage.diamond": "Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo",
+  "CompanyProfilePage.direct": "Representative Director and CEO",
+  "CompanyProfilePage.dunkColtd": "Dunkit Co., Ltd.",
+  "CompanyProfilePage.estab": "Established",
+  "CompanyProfilePage.executive": "Executive Introduction",
+  "CompanyProfilePage.fromtheschool": "Graduated from the School of International Liberal Studies at Waseda University. While still a student, he launched the Waseda University international student community \"WasedaTime\" and a parking lot business. He has experience in developing and operating various software, including SNS and parking lot service apps.",
+  "CompanyProfilePage.kazu": "Kazuma Kotani",
+  "CompanyProfilePage.kotni": "Kazuma Kotani",
+  "CompanyProfilePage.locat": "location",
+  "CompanyProfilePage.majorshar": "Major Shareholders",
+  "CompanyProfilePage.manag": "Provision and management of rental items for sports facilities",
+  "CompanyProfilePage.oct": "October 2024",
+  "CompanyProfilePage.park": "Jason Park",
+  "CompanyProfilePage.policy": "Currently in his third year at the Faculty of Policy Management, Keio University.After long-term internships at the Chilean Embassy's Commercial Affairs Section and a foreign financial company, he launched several businesses.After noticing the issues that come with going to the gym, he co-founded Dunkit Inc.",
+  "CompanyProfilePage.represent": "Representative",
+  "CompanyProfilePage.yn": "31,000,000 yen",
+  "CompnyProfile.comp": "会社概要",
+  "CpompanyProfilePage.1mint": "1 minuts walk from the to Yeasu main entrance of Tokyo Station"
 }
 
 

@@ -3,59 +3,61 @@
 
 //Todo: translation
 import MaxWidth from "@/components/max-width"
-import { FormattedMessage } from "react-intl"
+import { useMemo } from "react"
+import { FormattedMessage,useIntl } from "react-intl"
 
 const CompanyProfilePage = () => {
-
-  const detail = [
+    const intl = useIntl();
+  const detail = useMemo(() => [
     {
-      Name:"Company Name",
-      description:"Dunkit Co., Ltd."
+      Name: intl.formatMessage({id:"CompanyProfilePage.Cname", defaultMessage:"Company Name"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.dunkColtd", defaultMessage:"Dunkit Co., Ltd."}),
     },
     {
-      Name:"Representative",
-      description:"Kazuma Kotani"
+      Name: intl.formatMessage({id:"CompanyProfilePage.represent", defaultMessage:"Representative"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.kotni", defaultMessage: "Kazuma Kotani"}),
     },
     {
-      Name:"Established",
-      description:"October 2024"
+      Name: intl.formatMessage({id:"CompanyProfilePage.estab", defaultMessage:"Established"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.oct", defaultMessage:"October 2024"}),
     },
     {
-      Name:"location",
-      description:"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo"
+      Name: intl.formatMessage({id:"CompanyProfilePage.locat", defaultMessage: "location"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.diamond", defaultMessage: "Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo"}),
     },
     {
-      Name:"Business Contents",
-      description:"Provision and management of rental items for sports facilities"
+      Name: intl.formatMessage({id:"CompanyProfilePage.BusContant", defaultMessage:  "Business Contents"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.manag", defaultMessage:  "Provision and management of rental items for sports facilities"}),
     },
     {
-      Name:"Capital",
-      description:"31,000,000 yen"
+      Name: intl.formatMessage({id:"CompanyProfilePage.cap", defaultMessage:"Capital"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.yn", defaultMessage:"31,000,000 yen"}),
     },
     {
-      Name:"Major Shareholders",
-      description:"XTech Ventures, Management Team"
+      Name: intl.formatMessage({id:"CompanyProfilePage.majorshar", defaultMessage: "Major Shareholders"}),
+      description: intl.formatMessage({id:"CompanyProfilePage.Xtech", defaultMessage:"XTech Ventures, Management Team"}),
     },
     
-  ]
+  ], [intl])
 
-  const intoduction = [
+  const intoduction = useMemo(() => [
     {
-      subTitle:"Representative Director and CEO",
-      title:"Kazuma Kotani",
+      subTitle: intl.formatMessage({id:"CompanyProfilePage.direct", defaultMessage:"Representative Director and CEO"}),
+      title: intl.formatMessage({id:"CompanyProfilePage.kazu", defaultMessage:"Kazuma Kotani"}),
       image: "/KazumaR.jpg",
-      description:`Currently in his third year at the Faculty of Policy Management, Keio University.
-      After long-term internships at the Chilean Embassy's Commercial Affairs Section and a foreign financial company, he launched several businesses.
-      After noticing the issues that come with going to the gym, he co-founded Dunkit Inc.`
+      description: intl.formatMessage({id:"CompanyProfilePage.policy", 
+        defaultMessage: `Currently in his third year at the Faculty of Policy Management, Keio University.After long-term internships at the Chilean Embassy's Commercial Affairs Section and a foreign financial company, he launched several businesses.After noticing the issues that come with going to the gym, he co-founded Dunkit Inc.`}),
     },
     {
-      subTitle:"Director and CTO",
-      title:"Jason Park",
+      subTitle: intl.formatMessage({id:"CompanyProfilePage.Cto", defaultMessage:"Director and CTO"}),
+      title: intl.formatMessage({id:"CompanyProfilePage.park", defaultMessage:"Jason Park"}),
       image: "/JasonR2.jpg",
-      description:`Graduated from the School of International Liberal Studies at Waseda University.
-      While still a student, he launched the Waseda University international student community "WasedaTime" and a parking lot business. He has experience in developing and operating various software, including SNS and parking lot service apps.`
+      description:intl.formatMessage({
+        id:"CompanyProfilePage.fromtheschool", 
+        defaultMessage:`Graduated from the School of International Liberal Studies at Waseda University.
+      While still a student, he launched the Waseda University international student community "WasedaTime" and a parking lot business. He has experience in developing and operating various software, including SNS and parking lot service apps.`}),
     },
-  ]
+  ], [intl])
 
   
   return (
@@ -89,7 +91,7 @@ const CompanyProfilePage = () => {
     <div className="px-4 py-2 lg:px-6 max-w-[800px] mx-auto ">
       <div className="flex justify-center">
         <h1 className=" text-3xl lg:text-7xl ">
-          <FormattedMessage id={"CompnyProfile.compny"} defaultMessage={"Company Profile"}/>
+          <FormattedMessage id={"CompnyProfile.comp"} defaultMessage={"Company Profile"}/>
         </h1>
       </div>
       <div className=" lg:mt-[150px] overflow-hidden ">
@@ -114,7 +116,7 @@ const CompanyProfilePage = () => {
         <div>
           <h1 className="text-2xl lg:text-5xl flex justify-center ">
             <FormattedMessage 
-              id={"CompanyProfilePage.Tokyo"} 
+              id={"CompanyProfilePag.Tokyo"} 
               defaultMessage={"Tokyo Head Office"}
             />
           </h1>
@@ -154,7 +156,7 @@ const CompanyProfilePage = () => {
           </div> 
         
         <div className="text-sm px-10 mt-20">
-          <FormattedMessage id={"CpompanyProfilePage.1minit"} 
+          <FormattedMessage id={"CpompanyProfilePage.1mint"} 
           defaultMessage={" 1 minuts walk from the to Yeasu main entrance of Tokyo Station"}
           />
         </div>

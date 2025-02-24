@@ -85,7 +85,7 @@ const Inquiry = () => {
               </div>
             </div>
             <div className="lg:gap-4 lg:grid lg:grid-cols-2 ">
-              <div className="mt-3 lg:mt-20">
+              <div className="mt-3 lg:mt-8">
                 <h5 className="font-bold ">
                   <FormattedMessage id={"Inquiry.companyNam"} defaultMessage={"Company Name (Optional)"}/>
                 </h5>
@@ -93,7 +93,7 @@ const Inquiry = () => {
                 placeholder={intl.formatMessage({id:"Inquiry.xxx", defaultMessage:"XXX Co.,Ltd."})}
                  />
               </div>
-              <div className="mt-3 lg:mt-20">
+              <div className="mt-3 lg:mt-8">
                 <h5 className="font-bold">
                   <FormattedMessage id={"Inquiry.dpt"} defaultMessage={" Department, position, etc. (optional)"}/>
                 </h5>
@@ -104,13 +104,21 @@ const Inquiry = () => {
             </div>
             <div>
               {/* { email address} */}
-              <div className="mt-3 lg:mt-17">
+              <div className="mt-8">
                 <div>
                   <h5 className="font-bold">
-                    <FormattedMessage id={"Inquiry.emal"} defaultMessage={"email address"}/>
+                    <FormattedMessage id={"Inquiry.emal"} defaultMessage={"Email address"}/>
                   </h5>
                 </div>
-                <input name="email" value={formData.email} onChange={handleChange} className="w-full lg:w-full py-2 border mt-2 border-gray-400" />
+                <input 
+                  name="email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  className="w-full lg:w-full border mt-2 border-gray-400 p-2  lg:py-3 lg:px-2"
+                  placeholder={intl.formatMessage({id:"Inquiry.email",
+                    defaultMessage:"Email address"})}
+
+                />
               </div>
               {/* { Inquriy contant } */}
               <div className="mt-14 lg:mt-13">

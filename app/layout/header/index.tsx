@@ -241,23 +241,25 @@ const Header = ({ isDark }: { isDark: boolean }) => {
             </div>
             <div
               onClick={() => router.push('/contact')}
-              className='relative cursor-pointer px-5 py-2 flex items-center gap-8 border border-gray-400 rounded-full bg-white
+              className='relative cursor-pointer px-5 py-3 flex items-center gap-8 border border-gray-400 rounded-full bg-white
                        overflow-hidden transition-all duration-700 ease-in-out group'
             >
               <span
                 className='absolute inset-0 bg-gradient-primary transform -translate-x-full 
                   group-hover:translate-x-0 transition-all duration-500 ease-in-out'
               ></span>
-              <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2'>
-                <Image
-                  width={20}
-                  height={20}
-                  src={'/right-arrow.svg'}
-                  alt={'dunkit arrow'}
-                />
+              <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2 flex items-center gap-12'>
+             
                 <FormattedMessage
                   id={'Header.inquiry'}
                   defaultMessage={'Inquiry'}
+                />
+                   <Image
+                  width={30}
+                  height={30}
+                  src={'/right-arrow.svg'}
+                  alt={'dunkit arrow'}
+                  // className='w-[20px] h-[20px]'
                 />
               </button>
             </div>

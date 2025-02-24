@@ -1,0 +1,44 @@
+{
+  "name": "dunkit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
+    "extract": "formatjs extract '{app,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json --throws"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gray-matter": "^4.0.3",
+    "js-cookie": "^3.0.5",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "next-auth": "^4.24.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-intl": "^7.0.1",
+    "react-markdown": "^10.0.0",
+    "resend": "^4.1.2",
+    "sonner": "^2.0.1",
+    "urql": "^4.2.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@formatjs/cli": "^6.2.4",
+    "@types/aos": "^3.0.7",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "package-name": "^0.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

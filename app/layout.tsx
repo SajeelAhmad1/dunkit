@@ -1,3 +1,5 @@
+"use client"
+
 // @/layout/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -29,21 +31,13 @@ const geistMono = Geist_Mono({
 });
 const messages = { en:jp, jp };
 
-export const metadata: Metadata = {
-  metadataBase: new URL(metadataBase),
-  title: {
-    template: '%s | Dunkit',
-    default: 'Dunkit',
-  },
-  description:
-    'Dunkit株式会社はサブスク型ジムレンタルウェアを提供しております。',
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
 
   const [language, setLanguage] = useState('EN');
+
+
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -56,6 +50,8 @@ export default function RootLayout({
     window.addEventListener('langChange', (e: any) => {
       setLanguage(e.detail);
     });
+
+    document.title = "Dunkit株式会社はサブスク型ジムレンタルウェアを提供しております。";
 
     return () => {
       window.removeEventListener('langChange', (e: any) => {
@@ -78,11 +74,13 @@ export default function RootLayout({
         <link rel="icon" href="/v.png" />
       </head>
       <body className={inter.className}>
+        <IntlProvider locale={language} messages={jp}>
         <LayoutWrapper>
           <Header/>
           {children}
           <Footer/>
           </LayoutWrapper>
+        </IntlProvider>
       </body>
     </html>
   );

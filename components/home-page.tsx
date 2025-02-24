@@ -298,7 +298,7 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              onClick = {()=>router.push("/news")}
+              onClick = {()=>router.push("/company/news")}
               className='mx-auto cursor-pointer'
             >
               <Button

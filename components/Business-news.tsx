@@ -65,7 +65,7 @@ const BusinessNews = () => {
             </div>
           </div>
           <div className='text-xl'>
-          <FormattedMessage id={"Announcement.<c>"} defaultMessage={"＜Company Profile＞"}/>
+          <FormattedMessage id={"Announcement.c"} defaultMessage={"＜Company Profile＞"}/>
           <br />
           <FormattedMessage id={"Announcement.Co.."} defaultMessage={"Comany name: Dunkit Co., Ltd."}/>
           <br />

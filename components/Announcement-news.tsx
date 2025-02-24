@@ -109,7 +109,7 @@ const Announcement = () => {
         <div className='text-base sm:text-lg lg:text-xl mb-20 '>
           <FormattedMessage id={"Announcement.k<c>"} defaultMessage={"＜Company Profile＞"}/>
           <br />
-          <FormattedMessage id={"Announcement.C1ro.."} defaultMessage={"Company name: Dunkit Co., Ltd."}/>
+          <FormattedMessage id={"Announcement.C1ro"} defaultMessage={"Company name: Dunkit Co., Ltd."}/>
           <br />
           <FormattedMessage id={"Announcement.rRepresent"} defaultMessage={"Representative: Kazuma Kotani"}/>
           <br />

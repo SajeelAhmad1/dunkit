@@ -15,13 +15,13 @@ const HomePage = ({ news }: { news: NewsItem[] }) => {
   return (
     <>
       {/* hero section */}
-      <div className=' text-white min-h-screen relative bg-[#000000cd]'>
+      <div className=' text-white min-h-screen relative'>
         <img
           src='/hero-section-bg.jpg'
           alt='Background'
           className='absolute w-full h-screen object-cover object-center mix-blend-overlay'
         />
-        <div className='bg-white/10 backdrop-blur-sm min-h-screen'>
+        <div className='bg-white/10 min-h-screen backdrop-blur-sm bg-black/30'>
           <MaxWidth className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0 min-h-screen pt-10 lg:pt-0'>
             {/* hero section */}
             <div className='flex flex-col m-auto gap-4 max-w-[450px]'

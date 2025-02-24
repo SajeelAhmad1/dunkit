@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       {/* hero section */}
-      <div className=' text-white min-h-screen relative bg-gradient-to-tl from-[#0000004d] to-[#0000005c] '>
+      <div className=' text-white min-h-screen relative bg-[#000000cd]'>
         <img
           src='/hero-section-bg.jpg'
           alt='Background'

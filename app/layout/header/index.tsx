@@ -107,15 +107,15 @@ const Header = () => {
   return (
     <>
       {/* desktop nav */}
+      <div className='backdrop-blur-sm w-full absolute z-50 border-b border-white'>
       <header
-        className={`hidden lg:flex items-center justify-between relative border-b border-white  px-4 py-1  backdrop-blur-sm z-[100]
-           bg-black/70`}
+        className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
       >
         <div className='flex items-center'>
           <img
             src='/logo.svg'
             alt='dunkit logo'
-            className='w-[250px] h-[60px]'
+            className='w-[200px] h-[40px]'
           />
         </div>
 
@@ -145,9 +145,10 @@ const Header = () => {
                     </button>
                     {item.children && item.children?.length > 0 && (
                       <div
-                        className='absolute top-4 -left-0 transition group-hover:translate-y-5
+                        className='fixed top-[30px] left-0 transition group-hover:translate-y-5
                        translate-y-8 opacity- invisible group-hover:opacity-100 group-hover:visible
-                        duration-500 ease-in-out group-hover:transform 2-50 min-w-[568px] transform'
+                        duration-500 ease-in-out group-hover:transform 2-50 min-w-[568px] transform w-screen'
+                        
                       >
                         <div className='relative top-6 p-6 bg-white  shadow-2xl w-full'>
                           <div
@@ -298,6 +299,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      </div>
     </>
   );
 };

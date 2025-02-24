@@ -4,10 +4,10 @@
 // Todo : Translation
 
 import Button from '@/components/button';
-import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react';
-import React from 'react';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import React, { useMemo } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import LanguageToggle from '@/components/Elements/LanguageToggle';
 import Image, { StaticImageData } from 'next/image';
 
@@ -23,46 +23,6 @@ type NavMenuItem = {
   children?: NavMenuSubItem[];
 };
 
-export const navMenu: NavMenuItem[] = [
-  {
-    name: 'Home',
-    path: '/',
-  },
-  {
-    name: 'Sevice',
-    path: '/service',
-    children: [
-      {
-        imageSrc: '/rental-wear.svg',
-        title: 'About Dunkit Rental Wear',
-        description:
-          'Details and features of the subscription-based rental clothing, shoes, and towels',
-        path: '/service',
-      },
-      {
-        imageSrc: 'message-image.svg',
-        title: 'Reasons for introduction',
-        description: 'Benefits and burdens for gym owners',
-        path: '/installment',
-      },
-      {
-        imageSrc: '/dollar-image.svg',
-        title: 'Price information',
-        description: 'Dunkit rental clothing prices',
-        path: '/pricing',
-      },
-    ],
-  },
-  {
-    name: 'Company Profile',
-    path: '/company',
-  },
-  {
-    name: 'News',
-    path: '/news',
-  },
-];
-
 const Header = ({ isDark }: { isDark: boolean }) => {
   const pathname = usePathname();
   // Check if a route is active
@@ -70,6 +30,74 @@ const Header = ({ isDark }: { isDark: boolean }) => {
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter();
+  const intl = useIntl();
+
+  const navMenu: NavMenuItem[] = useMemo(
+    () => [
+      {
+        name: intl.formatMessage({ id: 'nav.Home', defaultMessage: 'Home' }),
+        path: '/',
+      },
+      {
+        name: intl.formatMessage({
+          id: 'nav.Services',
+          defaultMessage: 'Services',
+        }),
+        path: '/service',
+        children: [
+          {
+            imageSrc: '/rental-wear.svg',
+            title: intl.formatMessage({
+              id: 'nav.subbasedrentalclothing',
+              defaultMessage: 'Subscription-based rental clothing',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.detailsrental',
+              defaultMessage:
+                'Details and features of the subscription-based rental clothing, shoes, and towels',
+            }),
+            path: '/service',
+          },
+          {
+            imageSrc: 'message-image.svg',
+            title: intl.formatMessage({
+              id: 'nav.reasonsforintroduction',
+              defaultMessage: 'Reasons for introduction',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.reasonsforintroductiondetails',
+              defaultMessage: 'Benefits and burdens for gym owners',
+            }),
+            path: '/installment',
+          },
+          {
+            imageSrc: '/dollar-image.svg',
+            title: intl.formatMessage({
+              id: 'nav.pricing',
+              defaultMessage: 'Price Information',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.pricingdetails',
+              defaultMessage: 'Dunkit rental clothing prices',
+            }),
+            path: '/pricing',
+          },
+        ],
+      },
+      {
+        name: intl.formatMessage({
+          id: 'nav.CompanyProfile',
+          defaultMessage: 'Company Profile',
+        }),
+        path: '/company',
+      },
+      {
+        name: intl.formatMessage({ id: 'nav.News', defaultMessage: 'News' }),
+        path: '/news',
+      },
+    ],
+    [intl],
+  );
 
   const handleNavigation = (event: React.MouseEvent, path: string) => {
     event.stopPropagation();
@@ -221,7 +249,12 @@ const Header = ({ isDark }: { isDark: boolean }) => {
                   group-hover:translate-x-0 transition-all duration-500 ease-in-out'
               ></span>
               <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2'>
-                <Image width={20} height={20} src={"/right-arrow.svg"} alt={'dunkit arrow'} />
+                <Image
+                  width={20}
+                  height={20}
+                  src={'/right-arrow.svg'}
+                  alt={'dunkit arrow'}
+                />
                 <FormattedMessage
                   id={'Header.inquiry'}
                   defaultMessage={'Inquiry'}

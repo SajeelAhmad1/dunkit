@@ -36,7 +36,6 @@
   "BusinessNews.what": "What is \"Dunkit\"",
   "CompanyProfile.data": "{value}",
   "CompanyProfilePage.Tokyo": "Tokyo Head Office",
-  "CompanyProfilePage.executive": "役員紹介",
   "CompnyProfile.compny": "会社概要",
   "CpompanyProfilePage.1minit": "1 minuts walk from the to Yeasu main entrance of Tokyo Station",
   "ExopComp.takeyourgym": "ジムの利便性を次のレベルに引き上げる",
@@ -159,8 +158,31 @@
   "FeaturesExp.noOperation.heading": "オペレーションなし",
   "FeaturesExp.noOperation.text": "サービス運営にかかる回収・洗濯・補充の作業を全て弊社側で行います。また完全無人レンタルサービスですので、24時間265日スタッフの手を借りずに運営可能です。",
   "FeaturesExp.revenueShare.heading": "レベニューシェア",
-  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。"
-  
+  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。",
+  "CompanyProfilePag.Tokyo": "東京本社",
+  "CompanyProfilePage.BusContant": "事業内容",
+  "CompanyProfilePage.Cname": "会社名　",
+  "CompanyProfilePage.Cto": "取締役CTO",
+  "CompanyProfilePage.Xtech": "XTech Ventures、経営陣",
+  "CompanyProfilePage.cap": "資本金　",
+  "CompanyProfilePage.diamond": "東京都港区浜松町2-2-15　浜松町ダイヤビル2F",
+  "CompanyProfilePage.direct": "代表取締役CEO",
+  "CompanyProfilePage.dunkColtd": "Dunkit株式会社",
+  "CompanyProfilePage.estab": "設立",
+  "CompanyProfilePage.executive": "役員紹介",
+  "CompanyProfilePage.fromtheschool": "早稲田大学国際教養学部卒業。在学中に早稲田大学留学生コミュニティ「WasedaTime」及び駐車場業を立ち上げる。SNSと駐車場サービスアプリを含む、様々なソフトウェアの開発運営経験あり。",
+  "CompanyProfilePage.kazu": "小谷一磨",
+  "CompanyProfilePage.kotni": "小谷一磨",
+  "CompanyProfilePage.locat": "所在地",
+  "CompanyProfilePage.majorshar": "主要株主",
+  "CompanyProfilePage.manag": "運動施設向けレンタルアイテムの提供・管理",
+  "CompanyProfilePage.oct": "2024年10月",
+  "CompanyProfilePage.park": "Jason Park",
+  "CompanyProfilePage.policy": "慶應義塾大学総合政策学部３年在籍。チリ大使館大使館商務部および外資系金融会社での長期インターンシップを経て複数の事業を立ち上げる。ジムを通う際の課題に気づきDunkit株式会社を共同創業。",
+  "CompanyProfilePage.represent": "代表者　",
+  "CompanyProfilePage.yn": "31,000,000円",
+  "CompnyProfile.comp": "会社概要",
+  "CpompanyProfilePage.1mint": "1 minuts walk from the to Yeasu main entrance of Tokyo Station"
 }
 
 

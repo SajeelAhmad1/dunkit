@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import type { NewsItem } from '@/types';
-import { formatDate } from '@/utils/formateDate';
+import Link from "next/link";
+import type { NewsItem } from "@/types";
+import { formatDate } from "@/utils/formateDate";
 
 export default function NewsCard({ news }: { news: NewsItem }) {
   return (

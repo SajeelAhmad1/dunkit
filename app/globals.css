@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-family: 'Arial', 'sans-serif'; 
+  --font-family: "Arial", "sans-serif";
   --untitled-ui--primary: #ec003c;
   --untitled-ui--teritary: #9d0033;
 }
@@ -30,7 +30,7 @@
   h4 {
     font-size: 30px;
     line-height: 30px;
-    letter-spacing: normal; 
+    letter-spacing: normal;
   }
   h5 {
     font-size: 16px;
@@ -92,9 +92,15 @@ body {
   font-family: var(--font-family);
 }
 
-
-
 .red-button {
-  background-image: linear-gradient(208deg, var(--untitled-ui--primary), var(--untitled-ui--teritary));
+  background-image: linear-gradient(
+    208deg,
+    var(--untitled-ui--primary),
+    var(--untitled-ui--teritary)
+  );
   color: white !important;
+}
+
+body {
+  font-family: var(--font-family);
 }

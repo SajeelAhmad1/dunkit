@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { getNewsItem } from '@/utils/news';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { formatDate } from '@/utils/formateDate';
-import ClientMarkdown from '@/components/Company/News/ClientMarkdown';
-import NewsDetails from '@/components/NewsDetails';
+import Link from "next/link";
+import { getNewsItem } from "@/utils/news";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { formatDate } from "@/utils/formateDate";
+import ClientMarkdown from "@/components/Company/News/ClientMarkdown";
+import NewsDetails from "@/components/NewsDetails";
 
 export async function generateMetadata({
   params,
@@ -26,13 +26,9 @@ export async function generateMetadata({
   };
 }
 
-function NewsDetailsPage ({
-    params,
-  }: {
-    params: { slug: string };
-  }) {
-    const news = getNewsItem(params.slug);
-    return <NewsDetails news={news}/>
+function NewsDetailsPage({ params }: { params: { slug: string } }) {
+  const news = getNewsItem(params.slug);
+  return <NewsDetails news={news} />;
 }
 
 export default NewsDetailsPage;

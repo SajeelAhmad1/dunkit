@@ -1,12 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Link from 'next/link';
-import { getAllNewsItems, getNewsItem } from '@/utils/news';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Markdown from 'react-markdown';
-import { formatDate } from '@/utils/formateDate';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
+import { getAllNewsItems, getNewsItem } from "@/utils/news";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Markdown from "react-markdown";
+import { formatDate } from "@/utils/formateDate";
 
 export async function generateMetadata({
   params,

@@ -4,7 +4,7 @@
 // Todo : Translation
 
 import Button from '@/components/button';
-import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import React, { useMemo } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -32,11 +32,79 @@ const Header = ({ isDark }: { isDark: boolean }) => {
   const router = useRouter();
   const intl = useIntl();
 
+  const navMenu: NavMenuItem[] = useMemo(
+    () => [
+      {
+        name: intl.formatMessage({ id: 'nav.Home', defaultMessage: 'Home' }),
+        path: '/',
+      },
+      {
+        name: intl.formatMessage({
+          id: 'nav.Services',
+          defaultMessage: 'Services',
+        }),
+        path: '/service',
+        children: [
+          {
+            imageSrc: '/rental-wear.svg',
+            title: intl.formatMessage({
+              id: 'nav.subbasedrentalclothing',
+              defaultMessage: 'Subscription-based rental clothing',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.detailsrental',
+              defaultMessage:
+                'Details and features of the subscription-based rental clothing, shoes, and towels',
+            }),
+            path: '/service',
+          },
+          {
+            imageSrc: 'message-image.svg',
+            title: intl.formatMessage({
+              id: 'nav.reasonsforintroduction',
+              defaultMessage: 'Reasons for introduction',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.reasonsforintroductiondetails',
+              defaultMessage: 'Benefits and burdens for gym owners',
+            }),
+            path: '/installment',
+          },
+          {
+            imageSrc: '/dollar-image.svg',
+            title: intl.formatMessage({
+              id: 'nav.pricing',
+              defaultMessage: 'Price Information',
+            }),
+            description: intl.formatMessage({
+              id: 'nav.pricingdetails',
+              defaultMessage: 'Dunkit rental clothing prices',
+            }),
+            path: '/pricing',
+          },
+        ],
+      },
+      {
+        name: intl.formatMessage({
+          id: 'nav.CompanyProfile',
+          defaultMessage: 'Company Profile',
+        }),
+        path: '/company',
+      },
+      {
+        name: intl.formatMessage({ id: 'nav.News', defaultMessage: 'News' }),
+        path: '/news',
+      },
+    ],
+    [intl],
+  );
+
   const handleNavigation = (event: React.MouseEvent, path: string) => {
     event.stopPropagation();
     router.push(path);
   };
 
+  /*
   const navMenu: NavMenuItem[] = useMemo(() => [
     {
       name: intl.formatMessage({ id: 'nav.Home', defaultMessage: 'Home' }),
@@ -99,6 +167,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
       path: '/news',
     },
   ], [intl]);
+  */
 
   // const location = useLocation();
 
@@ -136,7 +205,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
   return (
     <>
       {/* desktop nav */}
-      <div className='backdrop-blur-sm w-full absolute top-0 z-[999] border-b border-[#ffffff99]'>
+      <div className='backdrop-blur-sm w-full absolute top-0 z-[999] border-b border-white'>
         <header
           className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
         >
@@ -248,18 +317,25 @@ const Header = ({ isDark }: { isDark: boolean }) => {
             </div>
             <div
               onClick={() => router.push('/contact')}
-              className='relative cursor-pointer px-5 py-2 flex items-center gap-8 border border-gray-400 rounded-full bg-white
+              className='relative cursor-pointer px-5 py-3 flex items-center gap-8 border border-gray-400 rounded-full bg-white
                        overflow-hidden transition-all duration-700 ease-in-out group'
             >
               <span
                 className='absolute inset-0 bg-gradient-primary transform -translate-x-full 
                   group-hover:translate-x-0 transition-all duration-500 ease-in-out'
               ></span>
-              <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2'>
-                <Image width={20} height={20} src={"/right-arrow.svg"} alt={'dunkit arrow'} />
+              <button className='relative z-10 uppercase  transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2 flex items-center gap-12'>
+             
                 <FormattedMessage
                   id={'Header.inquiry'}
                   defaultMessage={'Inquiry'}
+                />
+                   <Image
+                  width={30}
+                  height={30}
+                  src={'/right-arrow.svg'}
+                  alt={'dunkit arrow'}
+                  // className='w-[20px] h-[20px]'
                 />
               </button>
             </div>

@@ -11,8 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#9D0043",
-        secondary: "#9D0043", 
+        primary: "#ec003c",
+        secondary: "#9d0033",  
+      },
+      backgroundImage: {
+        "gradient-primary": "linear-gradient(to right, #ec003c, #9d0033)",
       },
     },
   },

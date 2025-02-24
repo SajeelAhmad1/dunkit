@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 // Todo: Translation
 
@@ -51,7 +51,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const router  = useRouter();
+  const router = useRouter();
   return (
     <div className='relative '>
       <MaxWidth className='flex flex-col items-center justify-center gap-12 py-12 '>
@@ -69,7 +69,7 @@ const Footer = () => {
               href={item.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-primary p-2 rounded-full text-white hover:scale-125 transform duration-300 ease-in-out'
+              className='bg-gradient-primary p-2 rounded-full text-white hover:scale-125 transform duration-300 ease-in-out'
             >
               <item.icon size={24} />
             </a>
@@ -79,7 +79,7 @@ const Footer = () => {
           {navMenu?.map((item: NavMenuItem, i: number) => {
             return (
               <div
-              onClick = {()=>router.push(item.path)}
+                onClick={() => router.push(item.path)}
                 key={i}
                 className=' hover:underline '
               >
@@ -90,16 +90,24 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            <FormattedMessage id={"Footer.hamamatsucho"} defaultMessage={"Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013"}/>
+            <FormattedMessage
+              id={'Footer.hamamatsucho'}
+              defaultMessage={
+                'Hamamatsucho Diamond Building 2F, 2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013'
+              }
+            />
           </p>
         </div>
 
         <div
           onClick={scrollToTop}
-          className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-primary w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-primary hover:text-primary transform duration-300 ease-in-out'
+          className=' absolute top-[35%] right-[15%] hidden cursor-pointer animate-bounce rounded-full bg-gradient-primary w-32 h-32 lg:flex items-center justify-center text-white hover:bg-white hover:border border-primary hover:text-primary transform duration-300 ease-in-out'
         >
           <p>
-            <FormattedMessage id={"Footer.back"} defaultMessage={"Back to top"}/>
+            <FormattedMessage
+              id={'Footer.back'}
+              defaultMessage={'Back to top'}
+            />
           </p>
         </div>
       </MaxWidth>

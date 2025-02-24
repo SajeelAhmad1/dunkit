@@ -1,14 +1,31 @@
-import React from "react";
-import { LucideIcon } from "lucide-react";
+import React from 'react';
+import { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   icon?: LucideIcon;
   animation?: boolean;
+  imageSrc?: string;
+  imageClass?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  icon,
+  animation,
+  imageSrc,
+  imageClass,
+  imageWidth = 200,
+  imageHeight = 200,
+  imageAlt = 'dunkit',
+  ...props
+}) => {
   const Icon = icon;
   return (
     <button
@@ -19,15 +36,17 @@ const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, .
       {/* Animated Background */}
       {animation && (
         <span
-          className="absolute inset-0 bg-gradient-to-r from-primary to-red-700 transform -translate-x-full 
-          group-hover:translate-x-0 transition-all duration-500 ease-in-out"
+          className='absolute inset-0 bg-gradient-primary transform -translate-x-full 
+          group-hover:translate-x-0 transition-all duration-500 ease-in-out'
         ></span>
       )}
 
       {/* Button Text */}
       <span
         className={`relative z-10 uppercase text-primary transition-all duration-300 ease-in-out ${
-          animation ? "group-hover:text-white group-hover:translate-x-2" : "hover:text-primary"
+          animation
+            ? 'group-hover:text-white group-hover:translate-x-2'
+            : 'hover:text-primary'
         }`}
       >
         {children}
@@ -36,10 +55,21 @@ const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, .
       {/* Arrow Icon */}
       {Icon && (
         <div
-          className="relative z-10 bg-primary rounded-full p-1 text-white transition-all duration-500 
-          group-hover:bg-transparent group-hover:text-transparent "
+          className='relative z-10 bg-primary rounded-full p-1 text-white transition-all duration-500 
+          group-hover:bg-transparent group-hover:text-transparent '
         >
           <Icon />
+        </div>
+      )}
+      {imageSrc && (
+        <div className={` `}>
+          <Image
+            src={imageSrc}
+            width={imageWidth}
+            height={imageHeight}
+            alt={imageAlt}
+            className={imageClass}
+          />
         </div>
       )}
     </button>

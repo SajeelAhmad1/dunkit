@@ -29,14 +29,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-const messages = { en:jp, jp };
+const messages = { en, jp };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
 
   const [language, setLanguage] = useState('EN');
-
 
 
   useEffect(() => {
@@ -77,7 +76,9 @@ export default function RootLayout({
         
         <LayoutWrapper>
           
-          <IntlProvider locale={language} messages={jp}>
+          <IntlProvider locale={language} messages={
+            (messages as any)[language.toLocaleLowerCase()]
+          }>
           <Header/>
           {children}
 

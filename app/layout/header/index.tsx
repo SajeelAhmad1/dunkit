@@ -17,6 +17,7 @@ import {
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { FormattedMessage } from 'react-intl';
+import LanguageToggle from '@/components/Elements/LanguageToggle';
 
 type NavMenuSubItem = {
   icon: LucideIcon;
@@ -118,10 +119,10 @@ const Header = () => {
             className='w-[200px] h-[40px]'
           />
         </div>
-
+        <div className='flex gap-16'>
         <div className='flex items-center'>
-          <nav className='flex items-center gap-8 '>
-            <ul className='flex items-center justify-center font-semibold'>
+          <nav className='flex items-center gap-12'>
+            <ul className='flex items-center justify-center gap-4 font-semibold'>
               {navMenu?.map((item: NavMenuItem, i: number) => {
                 return (
                   <div
@@ -189,6 +190,9 @@ const Header = () => {
                   </div>
                 );
               })}
+              <span>
+                <LanguageToggle />
+              </span>
             </ul>
           </nav>
         </div>
@@ -202,6 +206,7 @@ const Header = () => {
           >
             <FormattedMessage id={"Header.inquiry"} defaultMessage={"Inquiry"}/>
           </Button>
+        </div>
         </div>
       </header>
 

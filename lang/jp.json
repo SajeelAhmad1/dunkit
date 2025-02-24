@@ -127,5 +127,18 @@
   "Inquiry.xxx": "XXX Co.,Ltd.",
   "Inquiry.yamad": "Yamada",
   "inquiry.send": "送信中...",
-  "inquiry.sendIq": "お問い合わせを送信"
+  "inquiry.sendIq": "お問い合わせを送信",
+  "nav.CompanyProfile": "会社概要",
+  "nav.Home": "ホーム",
+  "nav.News": "ニュース",
+  "nav.Services": "サービス",
+  "nav.detailsrental": "サブスク型レンタルウェア・シューズ・タオルの詳細と特徴",
+  "nav.pricing": "料金案内",
+  "nav.pricingdetails": "Dunkitレンタルウェアの料金について",
+  "nav.reasonsforintroduction": "導入される理由",
+  "nav.reasonsforintroductiondetails": "ジムオーナーへのメリットや負担について",
+  "nav.subbasedrentalclothing": "Dunkitレンタルウェアについて"
 }
+
+
+

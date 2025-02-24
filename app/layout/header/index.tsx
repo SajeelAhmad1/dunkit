@@ -37,11 +37,11 @@ const Header = ({ isDark }: { isDark: boolean }) => {
 
   const navMenu: NavMenuItem[] = useMemo(() => [
     {
-      name: intl.formatMessage({ id: 'Home', defaultMessage: 'Home' }),
+      name: intl.formatMessage({ id: 'nav.Home', defaultMessage: 'Home' }),
       path: '/',
     },
     {
-      name: intl.formatMessage({ id: 'Services', defaultMessage: 'Services' }),
+      name: intl.formatMessage({ id: 'nav.Services', defaultMessage: 'Services' }),
       path: '/service',
       children: [
         {
@@ -87,16 +87,16 @@ const Header = ({ isDark }: { isDark: boolean }) => {
     },
     {
       name: intl.formatMessage({
-        id: 'CompanyProfile',
+        id: 'nav.CompanyProfile',
         defaultMessage: 'Company Profile',
       }),
       path: '/company',
     },
     {
-      name: intl.formatMessage({ id: 'News', defaultMessage: 'News' }),
+      name: intl.formatMessage({ id: 'nav.News', defaultMessage: 'News' }),
       path: '/news',
     },
-  ], []);
+  ], [intl]);
 
   // const location = useLocation();
 

@@ -24,8 +24,8 @@ const LanguageToggle = ({ style }: any) => {
         onClick={() => setSelectedLang('JP')}
         className={`px-4 py-2 font-pretendardLight text-sm ${
           selectedLang === 'JP'
-            ? ' bg-white  text-[#4d0000] font-bold'
-            : ' bg-[#00000000]  text-white'
+            ? ' bg-[#ffffff88]  text-white font-bold'
+            : ' bg-[#ffffff44]  text-white'
         }`}
       >
         JP
@@ -34,8 +34,8 @@ const LanguageToggle = ({ style }: any) => {
         onClick={() => setSelectedLang('EN')}
         className={`px-4 font-pretendardLight py-2 text-sm ${
           selectedLang === 'EN'
-            ? 'bg-white text-[#4d0000] font-bold'
-            : 'bg-[#00000000] text-white'
+            ? 'bg-[#ffffff88] text-white font-bold'
+            : 'bg-[#ffffff44]  text-white'
         }`}
       >
         EN

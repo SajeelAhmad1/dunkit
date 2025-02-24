@@ -21,14 +21,16 @@ const LanguageToggle = ({ style, isDark }: any) => {
   const bgClass = isDark ? "bg-[#00000088]" : "bg-[#ffffff88]";
   const bgClassB = isDark ? "bg-[#00000044]" : "bg-[#ffffff44]";
 
+  const textColor = isDark ? "text-[#000000dd]" : "text-white";
+
   return (
     <div className={`flex border-4 border-[#00000000]  overflow-hidden`}>
       <button
         onClick={() => setSelectedLang('JP')}
         className={`px-4 py-2 font-pretendardLight text-sm ${
           selectedLang === 'JP'
-            ? `${bgClass} bg-[#ffffff88]  text-white font-bold`
-            : `${bgClassB}  text-white`
+            ? `${bgClass} bg-[#ffffff88]  ${textColor} font-bold`
+            : `${bgClassB}  ${textColor}`
         }`}
       >
         JP
@@ -37,8 +39,8 @@ const LanguageToggle = ({ style, isDark }: any) => {
         onClick={() => setSelectedLang('EN')}
         className={`px-4 font-pretendardLight py-2 text-sm ${
           selectedLang === 'EN'
-            ? 'bg-[#ffffff88] text-white font-bold'
-            : 'bg-[#ffffff44]  text-white'
+            ? `bg-[#ffffff88] ${textColor} font-bold`
+            : `bg-[#ffffff44] ${textColor}`
         }`}
       >
         EN

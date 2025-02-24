@@ -63,8 +63,10 @@ export const navMenu: NavMenuItem[] = [
   },
 ];
 
-const Header = ({ isDark }: { isDark: boolean }) => {
+const Header = ({isDark}: {isDark: boolean}) => {
   const pathname = usePathname();
+  // Check if a route is active
+  const isActive = (path: string) => pathname === path;
   const [openMobilNav, setOpenMobilNav] = React.useState(false);
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const router = useRouter();
@@ -74,19 +76,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
     router.push(path);
   };
 
-  // const location = useLocation();
-
-  // const getBackground = () => {
-  //   if (
-  //     location.pathname === '/news' ||
-  //     location.pathname === '/company' ||
-  //     location.pathname !== '/'
-  //   ) {
-  //     return 'bg-white/70 text-black';
-  //   } else {
-  //     return 'bg-black/70 text-white';
-  //   }
-  // };
+ 
 
   const handleToggleMobileNav = () => {
     setOpenMobilNav(!openMobilNav);
@@ -96,8 +86,16 @@ const Header = ({ isDark }: { isDark: boolean }) => {
     setOpenSubMenu(openSubMenu === name ? null : name);
   };
 
+  // const isDark =
+  //   pathname === '/' ||
+  //   pathname === '/service' ||
+  //   pathname === '/installment' ||
+  //   pathname === '/pricing'
+  //     ? false
+  //     : true;
+
   const textClass = isDark ? 'text-warm-gray' : 'text-white';
-  const textClassB = isDark ? 'text-black/50' : 'text-white/50';
+  const textClassB = isDark ? 'text-black' : 'text-warm-gray';
 
   return (
     <>
@@ -106,7 +104,10 @@ const Header = ({ isDark }: { isDark: boolean }) => {
         <header
           className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
         >
-          <div className='flex items-center cursor-pointer' onClick={() => pathname !== '/' ? router.push('/') : null} >
+          <div
+            className='flex items-center cursor-pointer'
+            onClick={() => (pathname !== '/' ? router.push('/') : null)}
+          >
             <Image
               // src={isDark ? "/dunkit-black.svg" : '/logo.svg'}
               src={isDark ? '/dunkit-black.svg' : '/logo.svg'}
@@ -121,19 +122,26 @@ const Header = ({ isDark }: { isDark: boolean }) => {
               <nav className='flex items-center gap-12'>
                 <ul className='flex items-center justify-center gap-4 font-semibold'>
                   {navMenu?.map((item: NavMenuItem, i: number) => {
-                    const isActive = pathname === item.path;
+                    const active = isActive(item.path);
                     return (
                       <div
                         onClick={(event) => handleNavigation(event, item.path)}
                         key={i}
-                        className={`${
-                          isActive
-                            ? `relative group px-3 py-2 font-bold text-sm ${textClass} `
-                            : `relative group px-3 py-2 font-normal text-sm ${textClassB}`} cursor-pointer`}
+                        className={` relative group px-3 py-2 text-sm cursor-pointer ${
+                          active
+                            ? ` font-bold  ${textClass} `
+                            : ` font-normal ${textClassB}`
+                        } `}
                       >
                         <button className='hover:opacity-100 flex items-center gap-1 cursor-pointer'>
                           <span
-                            className={`text-sm font-normal hover:font-bold ${textClassB} hover:${textClass}`}
+                            className={`text-sm ${
+                              active
+                                ? 'font-bold'
+                                : 'font-normal hover:font-bold'
+                            } ${
+                              active ? textClass : textClassB
+                            } hover:${textClass}`}
                           >
                             {item.name}
                           </span>
@@ -224,7 +232,10 @@ const Header = ({ isDark }: { isDark: boolean }) => {
 
         {/* mobile nav */}
         <header className='relative flex lg:hidden items-center justify-between bg-white border-b border-white  px-4 py-2 z-[100]'>
-          <div className='flex items-center'>
+          <div
+            className='flex items-center'
+            onClick={() => (pathname !== '/' ? router.push('/') : null)}
+          >
             <Image
               src='/logo.svg'
               width={200}

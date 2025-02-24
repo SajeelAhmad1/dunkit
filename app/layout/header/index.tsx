@@ -72,6 +72,12 @@ const Header = () => {
   const router = useRouter()
 
 
+  const handleNavigation = (event: React.MouseEvent, path: string) => {
+    event.stopPropagation();
+    router.push(path);
+  };
+
+
   // const location = useLocation();
 
   // const getBackground = () => {
@@ -115,7 +121,7 @@ const Header = () => {
               {navMenu?.map((item: NavMenuItem, i: number) => {
                 return (
                   <div
-                    onClick={() => router.push(item.path)}
+                  onClick={(event) => handleNavigation(event, item.path)}
                     key={i}
                     className={`${({ isActive }: { isActive: boolean }) =>
                       isActive
@@ -151,7 +157,7 @@ const Header = () => {
                                   const IconComponent = child.icon;
                                   return (
                                     <div
-                                      onClick={() => router.push(child.path)}
+                                    onClick={(event) => handleNavigation(event, child.path)}
                                       key={`${i}-${idx}`}
                                       className='flex items-center gap-4 hover:bg-gray-100 rounded-2xl p-4 cursor-pointer'
                                     >

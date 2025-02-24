@@ -20,7 +20,7 @@ const Features = () => {
     ]
     return (
         <div className="flex flex-col items-center space-y-20">
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-4 px-4">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
                     Features of Dunkit
                 </h1>

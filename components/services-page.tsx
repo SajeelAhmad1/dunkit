@@ -11,11 +11,11 @@ const ServicesPage = () => {
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 pb-32"> 
         
-        <div className="relative space-y-40 mt-20"> 
+        <div className="relative space-y-20 mt-20"> 
           <ServicesIntro text = {text}/>
           <ExpComp />
           <HowToUse/>
-          <Promotion/>
+          {/* <Promotion/> */}
         </div>
       </main>
     </div>

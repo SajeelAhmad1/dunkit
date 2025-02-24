@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
 import { Toaster } from "sonner"
+import Button from "./button"
 
 const Inquiry = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +17,7 @@ const Inquiry = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
-  
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,7 +26,7 @@ const Inquiry = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
 
     const response = await fetch("/api/send-inquiry", {
       method: "POST",
@@ -45,7 +46,7 @@ const Inquiry = () => {
   };
   return (
     <div className="min-h-screen">
-      <Toaster position="top-right"/>
+      <Toaster position="top-right" />
       <div className="h-[300px] lg:h-[450px] "
         style={{
           backgroundImage: "url(/Inquiry.png)",
@@ -98,23 +99,23 @@ const Inquiry = () => {
             </div>
             {/*>>>> { Send inquiry button } <<<<<<*/}
             <div className="flex justify-center mt-3 lg:mt-10">
-              <button type="submit" disabled={loading} className="relative px-5 py-4 flex items-center gap-8 border border-gray-400 rounded-full bg-white 
+              <button type="submit" disabled={loading} className="relative  flex items-center gap-8  bg-white 
+              
   overflow-hidden transition-all duration-700 ease-in-out group ">
-                {/* Background fill effect */}
-                <span className="absolute inset-0 bg-linear-to-r from-red-500 to-red-700 transform -translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-in-out"></span>
-                {/* Button Text */}
-                <h6 className="relative z-10 hover:translate-x-2 uppercase text-red-500 group-hover:text-white transition-all duration-300">
-                {loading ? "Sending..." : "Send Inquiry"}
-                </h6>
-                {/* Arrow Icon */}
-                <div className="group-hover:scale-0  transition-all duration-500 relative z-10 bg-red-500 rounded-full p-1 text-white   group-hover:text-red-500">
-                  <ArrowRight className="" />
-                </div>
+                <Button
+              
+              icon={ArrowRight}
+              animation
+            >
+              {loading ? "Sending..." : "Send Inquiry"}
+            </Button>
+                
               </button>
+              
 
             </div>
           </div>
-          
+
         </form>
       </MaxWidth>
     </div>

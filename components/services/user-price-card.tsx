@@ -53,10 +53,10 @@ const UserPriceCard = () => {
             </div>
             {/* Pro  */}
             <div className="w-3/4 md:w-1/4 border-[1.5px] border-red-600 rounded-lg p-4">
-                <span className="text-xs bg-red-900 rounded-full text-white px-2 py-1">
+                <span className="text-xs bg-gradient-to-r from-red-600 to-red-700 rounded-full text-white px-2 py-1">
                     recommendation
                 </span>
-                <h1 className="text-5xl">Pro</h1>
+                <h1 className="text-5xl mt-4">Pro</h1>
                 <p className="text-lg font-medium mt-2">2,480 yen/month (excluding tax)
 
                 </p>

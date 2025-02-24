@@ -1,6 +1,8 @@
 import { Resend } from 'resend';
 
-const resend = new Resend("re_jfcLx8jw_Nqn5wKAjbHvwLdmp5bXq67qY");
+const resend = new Resend(process.env.RESEND_API_KEY);
+// const apiKey = functions.config().myconfig.resend_api_key;
+// const resend = new Resend(apiKey);
 
 export async function POST(req: Request) {
   try {
@@ -8,6 +10,9 @@ export async function POST(req: Request) {
 
     if (!email || !message) {
       return new Response(JSON.stringify({ error: "Email and message are required." }), { status: 400 });
+    }
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
     }
 
     const response = await resend.emails.send({

@@ -15,7 +15,7 @@ const PriceInfo = () => {
                 <div className="relative space-y-10 mt-20">
                     <ServicesIntro text={text} />
 
-                    <div className="flex justify-center space-x-4 mt-40">
+                    <div className="flex justify-center space-x-4 ">
                         <span className="text-lg font-semibold text-gray-500">
                             Gym User
                         </span>

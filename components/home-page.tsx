@@ -21,7 +21,7 @@ const HomePage = () => {
         <div className='bg-white/10 backdrop-blur-sm min-h-screen'>
           <MaxWidth className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0 min-h-screen pt-10 lg:pt-0'>
             {/* hero section */}
-            <div className='flex flex-col  m-auto gap-4 max-w-[400px]'
+            <div className='flex flex-col  m-auto gap-4 max-w-[450px]'
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >

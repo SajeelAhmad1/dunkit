@@ -8,20 +8,22 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-     "extract": "formatjs extract '{app,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json --throws"
+    "extract": "formatjs extract '{app,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file lang/en.json --throws"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
+    "react-hot-toast": "^2.5.2",
+    "react-intl": "^7.0.1",
+    "react-markdown": "^10.0.0",
     "resend": "^4.1.2",
-    "sonner": "^2.0.1"
-=======
-    "react-intl": "^7.0.1"
->>>>>>> abd745c7bf3cf760ff02356aaadb427b281cd82a
+    "sonner": "^2.0.1",
+    "urql": "^4.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -6,9 +6,10 @@ interface ButtonProps {
   className?: string;
   icon?: LucideIcon;
   animation?: boolean;
+  customClassName?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, icon, animation, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ children, className, icon, customClassName, animation, ...props }) => {
   const Icon = icon;
   return (
     <button

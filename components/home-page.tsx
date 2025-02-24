@@ -24,12 +24,12 @@ const HomePage = ({ news }: { news: NewsItem[] }) => {
         <div className='bg-white/10 backdrop-blur-sm min-h-screen'>
           <MaxWidth className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0 min-h-screen pt-10 lg:pt-0'>
             {/* hero section */}
-            <div className='flex flex-col  m-auto gap-4 max-w-[450px]'
+            <div className='flex flex-col m-auto gap-4 max-w-[450px]'
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
               <div>
-                <h1 >
+                <h1  className='text-[55px]'>
                   <FormattedMessage 
                     id={"HomePage.make"} 
                     defaultMessage={"Make it easier to continue your gym routine"}
@@ -37,7 +37,7 @@ const HomePage = ({ news }: { news: NewsItem[] }) => {
                 </h1>
               </div>
               <div>
-                <p >
+                <p className='text-[20px]'>
                   <FormattedMessage id={"HomePage.commited"}
                   defaultMessage={"We are committed to providing a casual and "} 
                   /><br/>
@@ -55,9 +55,11 @@ const HomePage = ({ news }: { news: NewsItem[] }) => {
             <div
             onClick={()=> router.push("/service")}
             >
-            <Button animation>
+            <div className='red-button py-4 px-6 cursor-pointer relative px-5 py-2 flex items-center gap-8 border border-gray-400 rounded-full bg-white   overflow-hidden transition-all duration-700 ease-in-out group'>
+              <div className='relative z-10 uppercase text-white transition-all duration-300 ease-in-out group-hover:text-white group-hover:translate-x-2" : "hover:text-primary'>
               <FormattedMessage id={"HomePage.click"} defaultMessage={" Click here for services details"}/>
-             </Button>
+              </div>
+              </div>
             </div>
               </div>
             </div>

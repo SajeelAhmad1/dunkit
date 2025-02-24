@@ -2,8 +2,35 @@
 import { FormattedMessage } from "react-intl";
 import { basic, plus, pro } from "./user-plans";
 import { Check, Minus } from "lucide-react";
+import { useMemo } from "react";
+import { useIntl } from "react-intl";
 
 const UserPriceCard = () => {
+
+
+
+    const intl = useIntl();
+
+    const { basic, plus, pro } = useMemo(() => {
+
+        const basic = [
+            { feature: intl.formatMessage({ id: "UserPriceCard.unlimitedBorrowing", defaultMessage: "Unlimited borrowing" }), available: true },
+            { feature: intl.formatMessage({ id: "UserPriceCard.tops", defaultMessage: "Tops" }), available: true },
+            { feature: intl.formatMessage({ id: "UserPriceCard.shorts", defaultMessage: "Shorts" }), available: true },
+            { feature: intl.formatMessage({ id: "UserPriceCard.shoesAndSocks", defaultMessage: "Shoes & Socks" }), available: false },
+            { feature: intl.formatMessage({ id: "UserPriceCard.towel", defaultMessage: "Towel" }), available: false },
+            { feature: intl.formatMessage({ id: "UserPriceCard.mutualUse", defaultMessage: "Mutual use" }), available: false },
+        ];
+
+        const plus = basic.map((item, index) =>
+            index === 3 ? { ...item, available: true } : item
+        );
+
+        const pro = basic.map((item) => ({ ...item, available: true }));
+
+        return { basic, plus, pro };
+    }, [intl]);
+
     return (
         <div className="flex flex-col md:flex-row items-center md:justify-center space-x-0 md:space-x-6 space-y-4 md:space-y-0">
             {/* Basic Plan  */}

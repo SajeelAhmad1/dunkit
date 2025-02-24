@@ -159,8 +159,13 @@
   "FeaturesExp.noOperation.heading": "オペレーションなし",
   "FeaturesExp.noOperation.text": "サービス運営にかかる回収・洗濯・補充の作業を全て弊社側で行います。また完全無人レンタルサービスですので、24時間265日スタッフの手を借りずに運営可能です。",
   "FeaturesExp.revenueShare.heading": "レベニューシェア",
-  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。"
-  
+  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。",
+  "UserPriceCard.mutualUse": "相互利用",
+  "UserPriceCard.shoesAndSocks": "シューズ ＆ ソックス",
+  "UserPriceCard.shorts": "ショーツ",
+  "UserPriceCard.tops": "トップス",
+  "UserPriceCard.towel": "タオル",
+  "UserPriceCard.unlimitedBorrowing": "借り放題"
 }
 
 

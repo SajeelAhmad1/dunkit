@@ -2,11 +2,13 @@
 "use client"
 import Button from '@/components/button';
 import MaxWidth from '@/components/max-width';
+import { NewsItem } from '@/types';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormattedMessage } from 'react-intl';
 
-const HomePage = () => {
+const HomePage = ({ news }: { news: NewsItem[] }) => {
 
   const router = useRouter();
 
@@ -266,14 +268,17 @@ const HomePage = () => {
               <FormattedMessage id={"HomePage.neEws"} defaultMessage={"NEWS"}/>
             </h2>
             <div className='flex flex-col gap-4 '>
-              <div className='group'>
+              {
+                news.slice(0, 2).map((n, i) => (
+                  <Link key={i} href={`/news/${n.slug}`}>
+              <div className='group cursor-pointer'>
                 <div
                   className='flex flex-col gap-2 p-2 border-b border-gray-200 
                 transform scale-y-100 group-hover:scale-y-105 transition-transform
                  duration-300 ease-in-out origin-top group-hover:bg-gray-100'
                 >
                   <p className='text-xs'>
-                    <FormattedMessage id={"HomePage.febuary"} defaultMessage={"February 21, 2025"}/>
+                    {n.date}
                   </p>
                   <h5 >
                   <FormattedMessage id={"HomePage.raises"} 
@@ -281,21 +286,10 @@ const HomePage = () => {
                   </h5>
                 </div>
               </div>
-              <div className='group'>
-                <div
-                  className='flex flex-col gap-2 p-2 border-b border-gray-200 
-                transform scale-y-100 group-hover:scale-y-105 transition-transform
-                 duration-300 ease-in-out origin-top group-hover:bg-gray-100'
-                >
-                  <p className='text-xs'>
-                    <FormattedMessage id={"HomePage.dates"} defaultMessage={"February 21, 2025"}/>
-                  </p>
-                  <h5>
-                  <FormattedMessage id={"HomePage.annunce"} defaultMessage={"Announcement of Corporate Website Renewal"}/>
-                  
-                  </h5>
-                </div>
-              </div>
+              </Link>
+                ))
+              }
+
             </div>
             <div
               onClick = {()=>router.push("/news")}

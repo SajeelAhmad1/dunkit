@@ -79,7 +79,7 @@ export default function RootLayout({
   }, []);
   return (
 
-    <html lang="ja">
+    <html lang="jp">
       <head>
         <link rel="icon" href="/v.png" />
       </head>

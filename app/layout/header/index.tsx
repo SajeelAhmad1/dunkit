@@ -112,7 +112,7 @@ const Header = ({ isDark }: { isDark: boolean }) => {
   return (
     <>
       {/* desktop nav */}
-      <div className='backdrop-blur-sm w-full absolute z-[999] border-b border-white'>
+      <div className='backdrop-blur-sm w-full absolute top-0 z-[999] border-b border-white'>
       <header
         className={`py-3 hidden lg:flex items-center justify-between relative  max-w-[1280px] mx-auto px-4 py-1  z-[100] `}
       >

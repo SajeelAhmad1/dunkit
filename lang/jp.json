@@ -147,7 +147,20 @@
   "HowToUse.ReturnItemsText": "レンタル品を利用し終わったら、アプリの指示に従って返却しましょう。",
   "HowToUse.ScanQRCode": "QRコードをスキャン",
   "HowToUse.StartRenting": "レンタルを開始",
-  "HowToUse.StartRentingText": "QRコードを読み込み、バッグのロックが解除されたらそのまま使えます！"
+  "HowToUse.StartRentingText": "QRコードを読み込み、バッグのロックが解除されたらそのまま使えます！",
+  "Feature.noCost": "コストなし",
+  "Feature.noCostText": "Dunkitは初期費用や利用料など、一切の費用をジムには請求しません。完全に予算０円で導入していただけます。",
+  "Feature.noOperation": "オペレーションなし",
+  "Feature.noOperationText": "洗濯・回収・補充といった作業はDunkitが無償で行います。スタッフのオペレーションを一切増やすことなくDunkitをご利用いただけます。",
+  "Feature.revenueShare": "レベニューシェア",
+  "Feature.revenueShareText": "Dunkitは売上の一部をパートナージムに還元する収益分配を導入しております。",
+  "FeaturesExp.noCost.heading": "コストなし",
+  "FeaturesExp.noCost.text": "Dunkitは導入のしやすさにこだわっており、初期費用・設置費用・契約料・月額料・洗濯料、その他経済的コストをジムに一切求めません。Dunkitを設置する場所をお貸しいただくだけで、完全無料で導入可能です。",
+  "FeaturesExp.noOperation.heading": "オペレーションなし",
+  "FeaturesExp.noOperation.text": "サービス運営にかかる回収・洗濯・補充の作業を全て弊社側で行います。また完全無人レンタルサービスですので、24時間265日スタッフの手を借りずに運営可能です。",
+  "FeaturesExp.revenueShare.heading": "レベニューシェア",
+  "FeaturesExp.revenueShare.text": "Dunkitはリスクフリーな導入に加え、空いてる空間を収益化します。各店舗ごとに一定の条件を満たした場合に、Dunkitの収益の一部をその店舗に還元します。"
+  
 }
 
 

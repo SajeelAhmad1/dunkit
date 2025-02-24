@@ -1,28 +1,30 @@
 'use client'
+import { useMemo } from "react";
 // Todo: Translation
 
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const Features = () => {
-
-    const data = [
+    const intl = useIntl();
+    
+    const data = useMemo(() => [
         {
             img: "no-cost.PNG",
-            heading: "No Cost",
-            text: "Dunkit does not charge any initial fees or usage fees to gyms. You can set up the service with absolutely no budget.",
+            heading: intl.formatMessage({ id: "Feature.noCost", defaultMessage: "No Cost" }),
+            text: intl.formatMessage({ id: "Feature.noCostText", defaultMessage: "Dunkit does not charge any initial fees or usage fees to gyms. You can set up the service with absolutely no budget." }),
         },
         {
             img: "no-operation.PNG",
-            heading: "No Operation",
-            text: "Dunkit will handle tasks such as washing, collection, and refilling free of charge, so you can use Dunkit without increasing the number of staff operations.",
+            heading: intl.formatMessage({ id: "Feature.noOperation", defaultMessage: "No Operation" }),
+            text: intl.formatMessage({ id: "Feature.noOperationText", defaultMessage: "Dunkit will handle tasks such as washing, collection, and refilling free of charge, so you can use Dunkit without increasing the number of staff operations." }),
         },
         {
             img: "revenue-share.PNG",
-            heading: "Revenue Share",
-            text: "Dunkit has implemented a revenue sharing system that returns a portion of sales to partner gyms.",
-
+            heading: intl.formatMessage({ id: "Feature.revenueShare", defaultMessage: "Revenue Share" }),
+            text: intl.formatMessage({ id: "Feature.revenueShareText", defaultMessage: "Dunkit has implemented a revenue sharing system that returns a portion of sales to partner gyms." }),
         }
-    ]
+    ], [intl])
+
     return (
         <div className="flex flex-col items-center space-y-20">
             <div className="flex flex-col items-center space-y-4 px-4">
